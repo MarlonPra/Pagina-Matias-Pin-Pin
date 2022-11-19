@@ -59,7 +59,7 @@ def login(request):
             messages.success(request, f"Estas logeado como {username}")
             return redirect('main:homepage')
         else:
-            messages.error(request, "Usuario o Contraseña Erronea")
+            messages.error(request, "Usuario o Contraseña Erronea s")
             return redirect('main:login')
 
     return render(request, 'main/Login-Register/login/login.html')
