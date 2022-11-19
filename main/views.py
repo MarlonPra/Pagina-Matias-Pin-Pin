@@ -12,6 +12,8 @@ from .carro import Carro
 # Create your views here.
 menu = {"menu": ''}
 
+redirectpagina = 'main:homepage'
+
 
 def homepage(request):
     return render(request, 'main/index.html')
@@ -22,21 +24,29 @@ def carta(request):
 
 
 def heladeria(request):
+    global redirectpagina
+    redirectpagina = request.path_info
     productos = producto.objects.all()
     return render(request, 'main/Menu/Helados.html', {"productos": productos})
 
 
 def comrapida(request):
+    global redirectpagina
+    redirectpagina = request.path_info
     productos = producto.objects.all()
     return render(request, 'main/Menu/Comidas_rapidas.html', {"productos": productos})
 
 
 def pizzeria(request):
+    global redirectpagina
+    redirectpagina = request.path_info
     productos = producto.objects.all()
     return render(request, 'main/Menu/pizza.html', {"productos": productos})
 
 
 def bebidas(request):
+    global redirectpagina
+    redirectpagina = request.path_info
     productos = producto.objects.all()
     return render(request, 'main/Menu/bebidas/Bebidas.html', {"productos": productos})
 
@@ -116,24 +126,25 @@ def agregar_producto(request, producto_id):
     carro = Carro(request)
     pproducto = producto.objects.get(id=producto_id)
     carro.agregar(producto=pproducto)
-    return redirect('main:carta')
+    return redirect(redirectpagina)
 
 
 def eliminar_producto(request, producto_id):
     carro = Carro(request)
     pproducto = producto.objects.get(id = producto_id)
     carro.eliminar(producto=pproducto)
-    return redirect('main:carta')
+    return redirect(redirectpagina)
 
 
 def restar_producto(request, producto_id):
     carro = Carro(request)
     pproducto = producto.objects.get(id=producto_id)
     carro.restar_producto(producto=pproducto)
-    return redirect('main:carta')
+    return redirect(redirectpagina)
 
 
 def limpiar_carro(request):
     carro = Carro(request)
     carro.limpiar_carro()
-    return redirect('main:carta')
+    return redirect(redirectpagina)
+
