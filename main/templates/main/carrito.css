@@ -1,0 +1,154 @@
+@font-face{
+    font-family: bigfatscript;
+    src:  url("Fuentes/Bigfat Script.ttf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+/*|----------------------Carrito--------------------------------|*/
+.carritoimg{
+    width: 60px;
+    height: auto;
+    position: absolute;
+    left: 160%;
+    bottom: -9%;
+    cursor: pointer;
+}
+
+.cart{
+    background-color:rgba(51, 51, 51, 0.6);
+    min-height: 100vh;
+    width: 400px;
+    position: absolute;
+    right: -100%;
+    top: 130%;
+    padding: 20px;
+    box-shadow: -2px 0 8px black;
+    transition: 0.3s;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+}
+.cart.active{
+    right: 0%;
+}
+
+/*|----------------------------------contenido----------------------------------------------|*/
+.titulo_carro{
+    color: #FFCD00;
+    font-family: Bigfat;
+    text-shadow: 5px 5px 0px #FF9800, 8px 8px 0px #00B7BD;
+    margin-bottom: 4%;
+}
+.contenido_carro{
+    color: white;
+    height:400px;
+    overflow:auto;
+}
+.contenido_todo{
+    border-left: 6px solid #FF9800;
+    background-color: rgba(239, 196, 158, 0.2);
+    margin-bottom: 2%;
+}
+
+.cont1{
+    display: flex;
+    margin-bottom: 10px;
+}
+.cont2{
+    display: flex;
+}
+.cont_carro{
+    text-align: center;
+    width: 50%;
+}
+.cantidad_carro{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+.botones_carro{
+    display: flex;
+    padding-left: 50px;
+}
+.botones_carro a{
+    text-decoration: none;
+    color: white;
+    background-color: #d75454;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 0px 10px;
+    font-size: 20px;
+
+}
+.name_carro{
+    color: #00B7BD;
+    text-shadow: 3px 3px 0px #34495e, 5px 5px 0px #34495e
+}
+.precio_carro{
+    padding-top: 20%;
+}
+
+.observacion_carro{
+    display: flex;
+    margin-top: 2%;
+}
+.observacion{
+    margin-right: 2%;
+    padding-top: 2%;
+    color: #FFCD00;
+    text-shadow: 2px 2px 1px #ff9800;
+    font-size: 24px;
+}
+.texto_carro_area{
+    width: 270px;
+    height: 59px;
+}
+.texto_carro{
+    color: #00b7bd;
+    text-shadow: 2px 2px 1px #ffcd00;
+    width: 65%;
+    font-size: 28px;
+}
+.texto_carro_total{
+    color: #FFCD00;
+    font-family: Bigfat;
+    text-shadow: 2px 2px 0px #ff9800, 5px 5px 0px #00b7bd;
+    margin-right: 3%;
+}
+.valor_boton{
+    display: flex;
+    margin-top: 2%;
+}
+.boton_carrito{
+    text-decoration: none;
+    font-family: 'Baloo 2', cursive;
+    background: #1E1E1E;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    height: 35px;
+    text-align: center;
+}
+.boton_carrito:hover{
+    background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%);
+    transition: all 500ms ease-out;
+    box-shadow: 2px 2px 10px black;
+}
+.carro_vacio{
+    width: 98%;
+    background-color: rgba(0,183,189,0.3);
+    border-radius: 40px;
+    border:3px solid #FF9800;
+    text-align: center;
+    height: 98%;
+    color: #FF9800;
+}
+.carro_vacio h1{
+    font-size: 100px;
+    font-family: 'Baloo 2', cursive;
+    text-shadow: 3px 9px 8px black;
+}

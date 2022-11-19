@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Menu</title>
+    <link rel="stylesheet" href="{% static 'Menu/styles_menu.css' %}">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="menu">
+        {% include "main/includes/navbar.html" %}
+    </div>
+    <div class="contenedor head">
+        <h1>Matias pin pin</h1>
+        <div class="copy">
+            <h3>Hoy es un dia perfecto para darte gusto</h3>
+        </div>
+    </div>
+</header>
+
+<body>
+    <section class="menu_carta">
+        <div class="menu_carta1">
+            <div class="menu_carta1-1">
+                <h2>MENU</h2>
+            </div>
+        </div>
+        <section class="cosas_menu">
+            <div class="contenedor1">
+                <div class="subcontenedor1">
+                    <h1>HELADOS</h1>
+                    <a href="carta/Heladeria" target="_blank">
+                        <figure>
+                        <img class="imgsubcon" src="{% static 'Menu/imagenes/Helados/portada_helado.png' %}">
+                        <div class="capa">
+                            <h3>Heladeria</h3>
+                            <p>Los helados pin pin son de una muy buena calidad debido a que sus ingredientes estan frescos, los empleados que los preparan estan equipados con unas buenas medidas de bioseguridad para garantizar su salud</p>
+                        </div>
+                    </figure>
+                    </a>
+                </div>
+                <div class="subcontenedor1-1">
+                    <h1>COMIDAS RAPIDAS</h1>
+                    <a href="carta/Comida Rapida" target="_blank">
+                        <figure>
+                        <img class="imgsubcon" src="{% static 'Menu/imagenes/hamburguesa.png' %}">
+                        <div class="capa2">
+                            <h3>Comidas Rapidas</h3>
+                            <p>Las comidas rapidas pin pin son de una muy buena calidad debido a que sus ingredientes estan frescos, los empleados que los preparan estan equipados con unas buenas medidas de bioseguridad para garantizar su salud tambien su sabor es inigualable</p>
+                        </div>
+                    </figure>
+                    </a>
+                </div>
+            </div>
+            <div class="contenedor2">
+                <div class="subcontenedor2">
+                    <h1>BEBIDAS</h1>
+                    <a href="carta/Bebidas" target="_blank">
+                        <figure>
+                            <img class="imgsubcon" src="{% static 'Menu/imagenes/Helados/portada_helado.png' %}">
+                            <div class="capa3">
+                                <h3>Bebidas</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Alias perspiciatis nisi laudantium optio, libero excepturi velit expedita? Ratione, aspernatur voluptatibus velit ea sint, maiores atque, dolores, accusamus in labore expedita.</p>
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+                <div class="subcontenedor2-1">
+                    <h1>PIZZA</h1>
+                    <a href="carta/Pizzeria" target="_blank">
+                        <figure>
+                        <img class="imgsubcon" src="{% static 'Menu/imagenes/pizza.png' %}">
+                        <div class="capa4">
+                            <h3>Pizza</h3>
+                            <p>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Officiis illum itaque nam maiores sint impedit, atque laborum aperiam eligendi praesentium maxime dignissimos nemo temporibus a, asperiores reiciendis ad velit. Eum.</p>
+                        </div>
+                    </figure>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+{% include "main/includes/footer.html" %}
+
+</html>

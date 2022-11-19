@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <title>Helados</title>
+    <link rel="stylesheet" href="{% static 'Menu/styles_helados.css' %}">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ------------------------------ -->
+</head>
+<header>
+    <div class="menu">
+        {% include "main/includes/navbar.html" %}
+    </div>
+    <div class="contenedor head">
+        <h1>Matias pin pin</h1>
+        <div class="copy">
+            <h3>Hoy es un dia perfecto para darte gusto</h3>
+        </div>
+    </div>
+</header>
+
+<body>
+    <section class="menu_carta">
+        <div class="menu_carta1">
+            <h1>HELADOS</h1>
+        </div>
+        <section class="seccion_helados">
+            <h1>SABORES DE HELADOS</h1>
+            <img class="helado_fondo" src="{% static 'Menu/imagenes/Helados/portada_helado.png' %}" alt="">
+            <div class="sabores_helados">
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/3 leches.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Tres Leches</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/arequipe.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Arequipe Con Salsa </h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Browne.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Brownie</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/vetado de caramelo.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Veteado De Caramelo</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Chicle.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Chicle Con Salsa</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Placer chocolate.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Placer De Chocolate</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Colcafe.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Colcafe Cappucino Caramelo</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/fresa.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Fresa</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Frutos del bosque.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Frutos Del Bosque</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Mandarina.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Mandarina</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/nata mani.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Nata Mani</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Maracuya.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Maracuya La Fuente</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Vetado de mora.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Veteado De Mora</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/napolitano.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Napolitano</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/ron pasas.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Ron Con Pasas</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/tiramisu.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Tiramisu</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Verano tropical.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Verano Tropical</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/Uva.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Uva</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/vainilla.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Vainilla</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/vainilla chip.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Vainilla - Chips</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/vainilla fresa.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Vainilla Fresa</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/vainilla light.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Vainilla Light</h3>
+                        </div>
+                    </figure>
+                </div>
+                <div class="imagenes_helados">
+                    <figure>
+                        <img class="img_sabores" src="{% static 'Menu/imagenes/Helados/sabores/vainilla pasas.png' %}" alt="">
+                        <div class="capa">
+                            <h3>Vainilla Pasa</h3>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="seccion_copas">
+            <h1>COPAS DE HELADO</h1>
+            <div class="imagenes_copas">
+                <div class="contenedor_cosas">
+                    <div class="imagenes_copas1">
+                        <figure>
+                            <img class="img_copas" src="{% static 'Menu/imagenes/Helados/copas/copa_fresa.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Copa Fantasia Fresa</h3>
+                            </div>
+                            <p class="parrafo1">Dos porciones de helado acompañado de fresa, crema avellana, chantilli, crema de leche, chips de chocolate y barquillo</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$10.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_copas1">
+                        <figure>
+                            <img class="img_copas" src="{% static 'Menu/imagenes/Helados/copas/copa_durazno.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Copa Durazno tentacion</h3>
+                            </div>
+                            <p class="parrafo2">Dos porciones de helado acompañado de chantilli, chips de chocolate, cereza, durazno y barquillo</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$9.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_copas1">
+                        <figure>
+                            <img class="img_copas" src="{% static 'Menu/imagenes/Helados/copas/copa_oreo.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Copa Oreo</h3>
+                            </div>
+                            <p class="parrafo3">Dos porciones de helado acompañado de salsa de chocolate, chantilli, galletas, oreo, crema de leche, queso, chips de chocolate y fresa</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$9.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="contenedor_cosas">
+                    <div class="imagenes_copas1">
+                        <figure>
+                            <img class="img_copas" src="{% static 'Menu/imagenes/Helados/copas/copa_queso.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Copa Queso</h3>
+                            </div>
+                            <p class="parrafo1">Dos porciones de helado, acompañado de salsa, galletas mini chips, chantilli, cereza, crema de leche y queso</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$10.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_copas1">
+                        <figure>
+                            <img class="img_copas" src="{% static 'Menu/imagenes/Helados/copas/copa_helado.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Copa Helado</h3>
+                            </div>
+                            <p class="parrafo2">Dos porciones de helado acompañado de fresa, mango, uva, queso, gelatina, chantilli, leche condensada, crema de leche y barquillo</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$8.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_copas1">
+                        <figure>
+                            <img class="img_copas" src="{% static 'Menu/imagenes/Helados/copas/copa_tropical.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Copa Tropical</h3>
+                            </div>
+                            <p class="parrafo3">Tres porciones de helado acompañado de queso, gelatina, chantilli, leche condensada, sandia, fresa, kiwi y barquillo</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$16.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="contenedor_cosas">
+                    <div class="imagenes_copas2">
+                        <figure>
+                            <img class="img_copas" src="{% static 'Menu/imagenes/Helados/copas/copa_gelatina.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Copa Gelatina</h3>
+                            </div>
+                            <p class="parrafo1">Una porción de helado, acompañado de queso, gelatina, chantillí, leche condensada y barquillo.</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$7.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seccion_browni">
+            <h1>BROWNIS/BANANAS SPLIT</h1>
+            <div class="imagenes_browni">
+                <div class="contenedor_cosas1">
+                    <div class="imagenes_browni2">
+                        <figure>
+                            <img class="img_browni" src="{% static 'Menu/imagenes/Helados/browni/browni_helado.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Browni Con Helado</h3>
+                            </div>
+                            <p class="parrafo1">Dos porciones de helado,
+                                acompañado de salsa de chocolate,
+                                brownie, chips de chocolate,
+                                chantillí y queso.</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$7.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_browni2">
+                        <figure>
+                            <img class="img_browni" src="{% static 'Menu/imagenes/Helados/browni/dulce_antojo.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Dulce Antojo</h3>
+                            </div>
+                            <p class="parrafo2">Dos porciones de helado acompañado
+                                de trozos de brownie, fresa, chantillí,
+                                queso, crema de leche, piña y chips de
+                                chocolate</p>
+                            <button class="botones_gaseosas" style="margin-top: 15px">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$7.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_browni2">
+                        <figure>
+                            <img class="img_browni" src="{% static 'Menu/imagenes/Helados/browni/banana_split.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Banana Split</h3>
+                            </div>
+                            <p class="parrafo3">Dos porciones de helado acompañado de banano, queso, salsa de mora, salsa de chocolate, manzana, fresa, mani, chantilli y barquillo</p>
+                            <button class="botones_gaseosas" style="margin-top: 0px">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$7.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_browni2">
+                        <figure>
+                            <img class="img_browni" src="{% static 'Menu/imagenes/Helados/browni/super_banana.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Super Banana Split</h3>
+                            </div>
+                            <p class="parrafo3">Tres porciones de helado acompañado de banano, queso, salsa de mora, salsa de chocolate, manzana, fresa, mani, chantilli, barquillo</p>
+                            <button class="botones_gaseosas" style="margin-top: 0px">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$7.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                </div>
+        </section>
+        <section class="seccion_ensalada">
+            <h1>ENSALADAS DE HELADOS</h1>
+            <div class="imagenes_browni">
+                <div class="contenedor_ensalada1">
+                    <div class="imagenes_browni1">
+                        <figure>
+                            <img class="img_browni2" src="{% static 'Menu/imagenes/Helados/Ensaladas/ensalada de frutas canasta.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Ensalada de frutas canasta</h3>
+                            </div>
+                            <p class="parrafo1-1">Una porcion de helado, acompañado de variedad de frutas, canasta de galleta, crema de leche, queso, chantillí y barquillo</p>
+                            <button class="botones_gaseosas" style="margin-left: 10vh; margin-top: 25px;">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$10.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_browni1">
+                        <figure>
+                            <img class="img_browni2" src="{% static 'Menu/imagenes/Helados/Ensaladas/ensalada de frutas pequeña.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Ensalada de frutas pequeña</h3>
+                            </div>
+                            <p class="parrafo2-1">Una porcion de helado acompañado de variedad de frutas, crema de leche, queso, chantilli y barquillo</p>
+                            <button class="botones_gaseosas" style="margin-left: 10vh; margin-top: 25px;">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$6.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_browni1">
+                        <figure>
+                            <img class="img_browni2" src="{% static 'Menu/imagenes/Helados/Ensaladas/ensalada de frutas.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Ensalada de frutas</h3>
+                            </div>
+                            <p class="parrafo3-1">Una porcion de helado acompañado de variedad de frutas, crema de leche, queso, chantilli y barquillo</p>
+                            <button class="botones_gaseosas" style="margin-left: 10vh; margin-top: 25px;">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$9.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                </div>
+                <div class="contenedor_ensalada1">
+                    <div class="imagenes_browni1">
+                        <figure>
+                            <img class="img_browni2" src="{% static 'Menu/imagenes/Helados/Ensaladas/cholao.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Cholao</h3>
+                            </div>
+                            <p class="parrafo3-1">Una porcion de helado acompañado de leche condensada, variedad de frutas, milo, galleta waffer y hielo</p>
+                            <button class="botones_gaseosas" style="margin-left: 10vh; margin-top: 25px;">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$8.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_browni1">
+                        <figure>
+                            <img class="img_browni2" src="{% static 'Menu/imagenes/Helados/Ensaladas/salpicream.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Salpicrema</h3>
+                            </div>
+                            <p class="parrafo3-1">Una porcion de helado acompañado de una deliciosa mezcla de frutas, crema de leche, queso, leche condensada y galleta waffer</p>
+                            <button class="botones_gaseosas" style="margin-left: 10vh; margin-top: 25px;">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$7.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_browni1">
+                        <figure>
+                            <img class="img_browni2" src="{% static 'Menu/imagenes/Helados/Ensaladas/salpicon con helado.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Salpicon con helado</h3>
+                            </div>
+                            <p class="parrafo3-1">Una porcion de helado acompañado de una deliciosa mezcla de frutas, crema de leche, milo y galleta waffer</p>
+                            <button class="botones_gaseosas1" style="margin-left: 10vh; margin-top: 25px; height: 60px">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$5.000 </br> $3.000 (Sin helado)</span>
+                            </button>
+                        </figure>
+                    </div>
+                </div>
+        </section>
+        <section class="seccion_niños">
+            <div class="menu_niños1">
+                <h1>MENU INFANTIL</h1>
+                <div class="contenedor_cosas2">
+                    <div class="imagenes_niños1">
+                        <figure>
+                            <img class="img_niños" src="{% static 'Menu/imagenes/Helados/niños/carrito.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Carrito</h3>
+                            </div>
+                            <p class="parrafo_niños">Dos bolas de helado, granjeas chocolate, galleta oreo, salsa de colores y chantilli</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$6.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_niños1">
+                        <figure>
+                            <img class="img_niños" src="{% static 'Menu/imagenes/Helados/niños/osita.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Osita</h3>
+                            </div>
+                            <p class="parrafo_niños">Dos bolas de helado, galleta oreo, granjeas colores</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$6.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_niños1">
+                        <figure>
+                            <img class="img_niños" src="{% static 'Menu/imagenes/Helados/niños/oso panda.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Oso Panda</h3>
+                            </div>
+                            <p class="parrafo_niños">Dos bolas de helado, galleta oreo, granjeas colores </p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$6.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_niños1">
+                        <figure>
+                            <img class="img_niños" src="{% static 'Menu/imagenes/Helados/niños/pulpo.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Pulpo</h3>
+                            </div>
+                            <p class="parrafo_niños">Una bola de helado, chantilli, granjeas, gusanito, morita, galleta oreo</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$5.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                    <div class="imagenes_niños1">
+                        <figure>
+                            <img class="img_niños" src="{% static 'Menu/imagenes/Helados/niños/copa kid.png' %}" alt="">
+                            <div class="capa1">
+                                <h3>Copa Kids</h3>
+                            </div>
+                            <p class="parrafo_niños">Dos bolas de helado gelatina, gusanitos, moritas, masmelo, salsa granjeas colores y chantilli</p>
+                            <button class="botones_gaseosas">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>$7.000</span>
+                            </button>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="texto_niños">
+                <div class="texto_niños1">
+                    <h1>Demas Productos</h1>
+                    <h2>Copa Fresas</h2>
+                    <p>Fresas, acompañadas de crema chantilli y salsa de chocolate</p>
+                    <button class="botones_gaseosas2">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$9.000</span>
+                    </button>
+                    <h2>Tapa De Helado</h2>
+                    <p>Dos porciones de helados en canastas de galleta, acompañado de queso, salsa, uva, fresa, cereza, chantilli y barquillo</p>
+                    <button class="botones_gaseosas2">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$8.000</span>
+                    </button>
+                    <h2>Cono Sencillo</h2>
+                    <p>Fresas, acompañadas de crema chantilli y salsa de chocolate</p>
+                    <button class="botones_gaseosas2">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$2.500</span>
+                    </button>
+                    <h2>Copa Pin Pin</h2>
+                    <p>Dos porciones de helado acompañado de chocolate, queso, crema de leche, chantilli, chips de chocolate y galleta waffer</p>
+                    <button class="botones_gaseosas2">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$8.000</span>
+                    </button>
+                    <h2>Porciones</h2>
+                    <h3>Porcion Gelatina............... $2.500</h3>
+                    <h3>Porcion Frutas............... $2.500</h3>
+                    <h3>Porcion Browni............... $2.500</h3>
+                    <h3>Porcion De Helado............... $2.500</h3>
+                    <h3>Galleta Bandeja (Canasta)............... $1.500</h3>
+                    <h3>Galleta Triangular............... $1.500</h3>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+{% include "main/includes/footer.html" %}
+
+</html>

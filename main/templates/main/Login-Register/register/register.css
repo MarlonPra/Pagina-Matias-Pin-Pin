@@ -1,0 +1,187 @@
+@font-face{
+    font-family: bigfatscript;
+    src:  url("Fuentes/Bigfat Script.ttf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap'); 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background-image: url(img/fondo.png);
+    background-color: #fef8e2;
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    width: 650px;
+    height: auto;
+    background-color: #1E1E1E;
+    box-shadow: 0px 0px 37px 10px #ffcd00, 0px 0px 37px 15px #FF9800;
+    border-radius: 16px;
+}
+
+.register,
+.login {
+    flex: 1;
+}
+
+.register {
+    padding: 40px;
+    position: relative;
+}
+
+.register h2 {
+    font-family: 'Baloo 2', cursive;
+    color: #00B7BD;
+    margin-bottom: 30px;
+}
+
+.register input {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'Baloo 2', cursive;
+    margin-bottom: 25px;
+    border: 2px solid #00B7BD;
+    border-radius: 5px;
+    background-color: #414141;
+    color: white;
+}
+
+.register input::placeholder {
+    color: #df9426;
+}
+
+.register:active,
+.register:focus {
+    outline: none;
+}
+
+.submit {
+    padding: 10px;
+    background-color: #FF9800;
+    color: white;
+    font-size: 16px;
+    box-shadow: 1px 3px 1px #000;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #FF9800;
+    width: 100%;
+    margin: 0px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.submit:hover {
+    background-position: 0;
+    background-color: #c97800;
+    border: 2px solid #c97800;
+}
+
+.register::after {
+    content: '>';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    right: -23px;
+    padding: 10px;
+    text-align: center;
+    font-size: 19px;
+    background-color: #00B7BD;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 1px 3px 1px #000;
+    color: white;
+}
+
+.login {
+    background-image: linear-gradient(90deg, #ffa600 0%, #ee8822 100%);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.login h2 {
+    font-family: 'Baloo 2', cursive;    
+    color: white;
+    margin-bottom: 45px;
+}
+
+.login button {
+    width: 100%;
+    margin: 15px 0px;
+    padding: 10px;
+    box-shadow: 1px 3px 1px #000;
+    cursor: pointer;
+    position: relative;
+}
+
+.login button i {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.login .google {
+    font-family: 'Baloo 2', cursive;
+    background: white;
+    border-style: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.login .google img {
+    width:20px;
+    height:20px;
+    float: left;
+}
+
+.login .fb {
+    font-family: 'Baloo 2', cursive;
+    background: #3b5999;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.login .cuenta {
+    font-family: 'Baloo 2', cursive;
+    background: #1E1E1E;
+    border-style: none;
+    color: white;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 540px) {
+    .login-container {
+        display: block;
+    }
+
+    .register,
+    .login {
+        flex: none;
+    }
+
+    .register::after {
+        top: unset;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+    }
+}

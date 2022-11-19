@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    {% load static %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'Login-Register/login/login.css' %}">
+    <title>Matias Pin Pin Login</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <!-- -------------ALERTAS MENSAJES TOAST----------------- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <!-- ----------------------------------------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <!-- ------------------------------ -->
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ------------------------------ -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-container">
+            {% if messages %}
+        {% for message in messages %}
+        <!-- |------------------------------error----------------------------------------| -->
+            {% if message.tags == 'error' %}
+                <script>
+                    $(function(){
+                        toastr.error("{{message}}", "" , {timeOut: 2000})
+                    });
+                </script>
+            {% endif %}
+        <!-- |------------------------------warning----------------------------------------| -->
+        {% endfor %}
+        
+    {% endif %}
+            <div class="login">
+                <h2>Inicio Sesión Matias Pin Pin</h2>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input name="username" type="text" placeholder="Ingrese Su Usuario" value="" required >
+                    <input name="pass" type="password" placeholder="Ingrese Su Contraseña" value="" required>
+                    <p class="olvidar">Olvide Mi Contraseña</p>
+                    <button type="submit" class="submit">Iniciar Sesión</button>
+                    <a class="redirect-register" href="register"><p>¿No tienes Cuenta?</p></a>
+                </form>
+                <hr>
+                <div class="login-logos">
+                    <button class="google"><i class='bx bxl-google' style='color:black' ></i>Acceder Con Google</button>
+                    <button class="fb"><i class='bx bxl-facebook' style='color:#ffffff'  ></i>Iniciar Con Facebook</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <title>Comidas Rapidas</title>
+    <link rel="stylesheet" href="{% static 'Menu/styles_comidas.css' %}">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<header>
+    <div class="menu">
+        {% include "main/includes/navbar.html" %}
+    </div>
+    <div class="contenedor head">
+        <h1>Matias pin pin</h1>
+        <div class="copy">
+            <h3>Hoy es un dia perfecto para darte gusto</h3>
+        </div>
+    </div>
+</header>
+
+<body>
+    <section class="seccion_comidas">
+        <h1>Comidas Rapidas</h1>
+        <div class="texto_comidas">
+            <div class="texto_comidas1">
+                <h1>Comidas</h1>
+                <div class="img_hamburguesas">
+                    <h2>Picada Pin Pin</h2>
+                    <img class="img_hambur" src="{% static 'Menu/imagenes/comida rapida/picada pin pin.png' %}">
+                    <p>Carne de cerdo, res, pollo, chorizo de las brisas, papa criolla, papa a la francesa, patacon, tomate, lechuga, queso fundido, papa ripio, huevo de codorniz, salsa de ajo y salsa de la casa</p>
+                    <a class="botones_gaseosas4" href="{% url 'main:agregar' 1 %}">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$30.000</span>
+                    </a>
+                    <button class="botones_gaseosas4">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$45.000</span>
+                    </button>
+                    <h3 class="text_comidas">(Picada Pin Pin)</h3>
+                    <h3 class="text_comidas">(Super Pin Pin)</br>Incluye carne de</br> hamburguesa</br> de res, pollo y cerdo</h3>
+                </div>
+                <div class="img_hamburguesas">
+                    <h2>Picada Mixta</h2>
+                    <img class="img_hambur" src="{% static 'Menu/imagenes/comida rapida/picada mixta.png' %}">
+                    <p>Patacon picado, carne de hamburguesa de res, cerdo, pollo, queso, salchicha americana, tocineta, huevo, papa a la franceza, tomate, lechuga, huevo de codorniz, salsa de ajo y salsa de la casa</p>
+                    <a class="botones_gaseosas5" href="{% url 'main:agregar' 2 %}">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$24.000</span>
+                    </a>
+                </div>
+                <div class="img_hamburguesas">
+                    <h2>Mazorcada</h2>
+                    <img class="img_hambur" src="{% static 'Menu/imagenes/comida rapida/mazorcada.png' %}">
+                    <p>Maiz, carne desmechada, pollo desmechado, chorizo, champiñones, salsa de la casa, queso, papa ripio y papa a la franceza</p>
+                    <button class="botones_gaseosas5">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$15.000</span>
+                    </button>
+                </div>
+                <div class="img_hamburguesas">
+                    <h2>Arepa Hamburguesa</h2>
+                    <img class="img_hambur" src="{% static 'Menu/imagenes/comida rapida/arepa hamburguesa.png' %}">
+                    <p>Carne de hamburguesa res, arepa , tocineta, queso, tomate, huevo, lechuga, ripio y salsa de la casa</p>
+                    <button class="botones_gaseosas4">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$9.000</span>
+                    </button>
+                    <button class="botones_gaseosas6">
+                        <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$8.000</span>
+                    </button>
+                    <h3 class="text_comidas1">(Cerdo o Pollo)</h3>
+                </div>
+                <div class="texto_comidas1-1">
+                    <h1>Hamburguesas</h1>
+                    <div class="texto_hambur">
+                        <button class="botones_gaseosas1">
+                            <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                            <span>Hamburguesa Pan Sencilla ......................................................................$7.000</span>
+                        </button>
+                        <p>(Carne de hamburguesa res, queso, tomate, lechuga, ripio y salsa de la casa)</p>
+                    </div>
+                    <div class="texto_hambur">
+                        <button class="botones_gaseosas1">
+                            <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                            <span>Hamburguesa Pan .........................................................................$8.000</span>
+                        </button>
+                        <p>(Carne de hamburguesa res, tocineta, huevo, queso, tomate, lechuga, ripio y salsa de la casa)</p>
+                    </div>
+                    <div class="texto_hambur">
+                        <button class="botones_gaseosas1">
+                            <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                            <span>Hamburguesa Pan (Cerdo o Pollo) ...................................................................................$9.000</span>
+                        </button>
+                        <p>(Carne de hamburguesa(Cerdo o pollo), tocineta, queso, tomate, huevo, lechuga, ripio y salsa de la casa)</p>
+                    </div>
+                    <div class="texto_hambur">
+                        <button class="botones_gaseosas1">
+                            <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                            <span>Hamburguesa PinPin ..............................................................................................$10.000</span>
+                        </button>
+                        <p>(Doble carne de hamburguesa res en pan, patacon o arepa, tocineta, queso, tomate, huevo, lechuga, ripio y salsa de la casa)</p>
+                    </div>
+                    <div class="texto_hambur">
+                        <button class="botones_gaseosas1">
+                            <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                            <span>Hamburguesa PinPin fundida en queso ............................................$16.000</span>
+                        </button>
+                        <p>(Pan fundido en queso, doble carne de hamburguesa res, tocineta, queso, tomate, huevo, lechuga, ripio y salsa de la casa)</p>
+                    </div>
+                    <div class="texto_hambur">
+                        <button class="botones_gaseosas1">
+                            <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                            <span>Hamburguesa Criolla PinPin ....................................................................................$12.000</span>
+                        </button>
+                        <p>(Carne de hamburguesa res, tocineta, queso, tomate, huevo, lechuga, ripio, maiz tierno, chorizo y salsa de la casa en pan, patacon o arepa)</p>
+                    </div>
+                    <div class="texto_hambur">
+                        <button class="botones_gaseosas1">
+                            <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                            <span>Hamburguesa Mexicana PinPin .....................................................................................$12.000</span>
+                        </button>
+                        <p>(Carne de hamburguesa res, tocineta, queso, tomate, huevo, lechuga, ripio, aguacate, jalapeño, carne desmechada y salsa de la casa en pan, patacon o arepa)</p>
+                    </div>
+                    <div class="img_hamburguesas2">
+                        <img class="img_hambur2" src="{% static 'Menu/imagenes/comida rapida/hamburguesa fundida queso.png' %}">
+                    </div>
+                    <div class="img_hamburguesas3">
+                        <h2>Con Patacon</h2>
+                        <div class="texto_hambur">
+                            <button class="botones_gaseosas2">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Hamburguesa </br>Patacon ....................................... $9.000</span>
+                            </button>
+                            <p>(Carne de hamburguesa res, patacon, tocineta, queso, tomate, huevo, lechuga, ripio y salsa de la casa)</p>
+                        </div>
+                        <div class="texto_hambur">
+                            <button class="botones_gaseosas2">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Hamburguesa </br>Patacon (Cerdo o Pollo)....................................... $10.000</span>
+                            </button>
+                            <p>(Carne de hamburguesa (Cerdo o Pollo), patacon tocineta, queso, tomate, huevo, lechuga, ripio y salsa de la casa)
+                                <img class="img_hambur3" src="{% static 'Menu/imagenes/comida rapida/hamburguesa patacon.png' %}"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="texto_combos">
+                <h1>Combos</h1>
+                <div>
+                    <div class="img_combos">
+                        <h2>Combos</h2>
+                        <button class="botones_gaseosas3">
+                            <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                            <span>Combo PinPin .................. $15.000</span>
+                        </button>
+                        <img class="img_combos1" src="{% static 'Menu/imagenes/comida rapida/combo pin pin.png' %}">
+                        <p>(Doble hamburguesa de carne de res, en pan, platano o arepa, huev, queso, papa ripio, tocineta, lechuga + porcion de papa a la franceza + coca cola en lata)
+                            <button class="botones_gaseosas3">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Combo sandwich de pollo .................. $6.000</span>
+                            </button>
+                            <p>(Pan, pollo desmechado, jamon, queso, tomate, lechuga y salsa de la casa + gaseosa mini) <p></p>
+                    </div>
+                    <div class="texto_combos2">
+                        <div class="texto_combos1">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Sandwich de Pollo ............................................................................................. $5.000</span>
+                            </button>
+                            <p>(Pan, pollo desmechado, jamon, queso, tomate, lechuga y salsa de la casa)</p>
+                        </div>
+                        <div class="texto_combos1">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Sandwich de Mixto ..................................................................................... $6.000</span>
+                            </button>
+                            <p>(Pan, pollo desmechado, carne desmechada, maiz tierno, champiñones, chorizo, jamon, queso, tomate, lechuga y salsa de la casa)</p>
+                        </div>
+                        <div class="texto_combos1">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Salchipapa ................................................................ $7.000</span>
+                            </button>
+                            <p>(Salchicha americana, queso, papa ripio, papa a la franceza y salsa de la casa)</p>
+                        </div>
+                        <div class="texto_combos1">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Papa Hamburguesa ............................................................................. $10.000</span>
+                            </button>
+                            <p>(Carne de hamburguesa de res, papas a la franceza, tocineta, queso, tomate, huevo, lechuga, ripio y salsa de la casa)</p>
+                        </div>
+                        <div class="texto_combos1">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Chori papa ................................................................. 10.000</span>
+                            </button>
+                            <p>(Papa a la franceza, queso, chorizo, ripio y salsa de la casa)</p>
+                        </div>
+                        <div class="texto_combos1">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Suizo ............................................................................ $12.000</span>
+                            </button>
+                            <p>(Suizo, ensalada, patacon y papa a la franceza)</p>
+                        </div>
+                        <div class="texto_combos1">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Arepa con queso ....................................................................... $1.500</span>
+                            </button>
+                            <p>(Arepa con queso)</p>
+                        </div>
+                    </div>
+                    <div class="texto_combos2">
+                        <h1>Perro Caliente</h1>
+                        <div class="texto2">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Perro Caliente .................................................................................. $7.000</span>
+                            </button>
+                            <p>(Pan, salchicha americana, papa ripio, tocineta, tomate, queso y salsa de la casa)</p>
+                        </div>
+                        <div class="texto2">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Perro Caliente Criollo PinPin ........................................................... $10.000</span>
+                            </button>
+                            <p>(Pan, salchicha americana, papa ripio, tocineta, tomate, queso, maiz tierno, chorizo y salsa de la casa)</p>
+                        </div>
+                        <div class="texto2">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Perro Caliente Mexicano PinPin ....................................................... $10.000</span>
+                            </button>
+                            <p>(Pan, salchicha americana, papa ripio, tocineta, tomate, queso, aguacate, jalapeño, carne desmechada y salsa de la casa)</p>
+                        </div>
+                    </div>
+                    <div class="texto_combos2">
+                        <h1>Carnes</h1>
+                        <div class="texto2">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Churrasco ........................................................................ $17.000</span>
+                            </button>
+                            <p>(Churrasco a la plancha, acompañado de patacon, papa a la franceza y ensalada de la casa)</p>
+                        </div>
+                        <div class="texto2">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Lomo de Cerdo .......................................................................... $15.000</span>
+                            </button>
+                            <p>(Lomito fino abierto acompañado de patacon, papas a la franceza y ensalada de la casa)</p>
+                        </div>
+                        <div class="texto2">
+                            <button class="botones_gaseosas1">
+                                <img src="{% static 'Menu/imagenes/carrito.png' %}" class="icono">
+                                <span>Pechuga a la plancha ......................................................... $15.000</span>
+                            </button>
+                            <p>(Pechuga abierta, acompañada de patacon, papas a la franceza y ensalada de la casa)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%;">
+            <div class="texto_combos3">
+                <h1>Porciones</h1>
+                <div class="texto2">
+                    <h4>Porcion de papa franceza ................................................................................... $3.000</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion carne de hamburguesa ................................................................................... $3.000</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion patacon.................................................................................. $2.000</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion de salchicha ................................................................................... $3.000</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion de huevo ................................................................................... $1.000</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion de queso ................................................................................... $2.500</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion huevos de codorniz ................................................................................... $3.000</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion carnes pinpin ................................................................................... $7.000</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion salsa de maiz ................................................................................... $2.500</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion Aros de cebolla ................................................................................... $4.000</h4>
+                </div>
+                <div class="texto2">
+                    <h4>Porcion Papa Criolla ................................................................................... $3.000</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+{% include "main/includes/footer.html" %}
+
+</html>

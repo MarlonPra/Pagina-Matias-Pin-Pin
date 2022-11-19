@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <title>Pizzas</title>
+    <link rel="stylesheet" href="{% static 'Menu/styles_pizza.css' %}">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ------------------------------ -->
+</head>
+<header>
+    <div class="menu">
+        {% include "main/includes/navbar.html" %}
+    </div>
+    <div class="contenedor head">
+        <h1>Matias pin pin</h1>
+        <div class="copy">
+            <h3>Hoy es un dia perfecto para darte gusto</h3>
+        </div>
+    </div>
+</header>
+
+<body>
+    <section class="seccion_pizza">
+        <h1>PIZZERIA</h1>
+        <div class="imagenes_pizza">
+            <h2>SABORES</h2>
+            <div class="imagenes_pizza1">
+                <h3>Hawaiana</h3>
+                <h3>Criolla</h3>
+                <h3>Champipollo</h3>
+                <h3>Pepperoni</h3>
+            </div>
+            <div class="imagenes_pizzas">
+                <img src="{%static 'Menu/imagenes/pizza/sabor pizza/hawaina.png' %}" alt="">
+                <img src="{%static 'Menu/imagenes/pizza/sabor pizza/criolla.png' %}" alt="">
+                <img src="{%static 'Menu/imagenes/pizza/sabor pizza/champipollo.png' %}" alt="">
+                <img src="{%static 'Menu/imagenes/pizza/sabor pizza/pepperoni.png' %}" alt="">
+                <p>Jamón, piña, queso,</br> salsa napolitana,</br>cerveroni</p>
+                <p>Carne de res, chorizo,</br> cerveroni, maiz, tierno, queso,</br>salsa napolitana</p>
+                <p>Pollo, cerveroni,</br> champiñones, chorizo, </br>queso, salsa napolitana</p>
+                <p>Pollo, cerveroni, chorizo</br> queso, salsa napolitana</p>
+            </div>
+            <div class="imagenes_pizza2">
+                <h3>Mexicana</h3>
+                <h3>Napolitana</h3>
+                <h3>Mixta</h3>
+                <h3>Vegetariana</h3>
+            </div>
+            <div class="imagenes_pizzas">
+                <img src="{%static 'Menu/imagenes/pizza/sabor pizza/mexicana.png' %}">
+                <img src="{%static 'Menu/imagenes/pizza/sabor pizza/napolitana.png' %}">
+                <img src="{%static 'Menu/imagenes/pizza/sabor pizza/mixta.png' %}">
+                <img src="{%static 'Menu/imagenes/pizza/sabor pizza/vegetariana.png' %}">
+                <p>Carne de res, cerveroni</br> jalapeño, chorizo, queso,</br>salsa napolitana</p>
+                <p>Tomate, queso, jamon,</br>salsa napolitana</p>
+                <p>Carne de res, pollo</br> cerveroni, jamon, champiñones,</br> piña,chorizo, queso,</br> salsa
+                    napolitana</p>
+                <p>Lechuga, pimenton,</br>apio, tomate, cebolla,</br>queso, salsa napolitana</p>
+            </div>
+        </div>
+        <div class="contenedor_pizza">
+            <div class="panzeroti">
+                <img src="{%static 'Menu/imagenes/pizza/panzeroti.png' %}" class="panzzeroti_img">
+                <h3>Panzzeroti</h3>
+                <p>Tu eliges (Hawaiana, criollo, </br>pepperoni, mixto, mexicano,</br> champipollo)</p>
+                <button class="botones_panzzeroti">
+                    <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                    <span>$10.000</span>
+                </button>
+            </div>
+            <div class="patacon">
+                <h3>Patacon y Pizza</h3>
+                <p>Patacon, pollo, y carne de res desmechado,</br>champiñones, pepperoni, salsa de la casa,</br>maiz
+                    tierno, papa ripio y queso gratinado</p>
+                <h4>(Pequeño)</h4>
+                <button class="botones_patacon">
+                    <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                    <span>$6.000</span>
+                </button>
+                <h4>(Grande)</h4>
+                <button class="botones_patacon">
+                    <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                    <span>$15.000</span>
+                </button>
+            </div>
+            <div class="porciones">
+                <h3>Porciones </h3>
+                <h2>Pizza (porcion)
+                    <button class="botones_pizza">
+                        <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$5.500</span>
+                    </button>
+                </h2>
+                <h2>Pizza personal
+                    <button class="botones_pizza">
+                        <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$10.000</span>
+                    </button>
+                </h2>
+                <h2>Pizza Disfrutar x 6
+                    <button class="botones_pizza">
+                        <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$31.000</span>
+                    </button>
+                </h2>
+                <h2>Pizza Compartir x 8
+                    <button class="botones_pizza">
+                        <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$41.000</span>
+                    </button>
+                </h2>
+                <h2>Pizza Celebrar x 10
+                    <button class="botones_pizza">
+                        <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$51.000</span>
+                    </button>
+                </h2>
+                <h2>Combo pizza celebrar
+                    <button class="botones_pizza">
+                        <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$54.000</span>
+                    </button>
+                </h2>
+                <p>(10 porciones, + gaseosa litro y medio)</p>
+                <h2>Combo pizza porcion
+                    <button class="botones_pizza">
+                        <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$6.000</span>
+                    </button>
+                </h2>
+                <p>porcion de pizza + gaseosa mini</p>
+            </div>
+        </div>
+        <div class="contenedor_lasaña">
+            <div class="lasaña">
+                <img src="{%static 'Menu/imagenes/pizza/lasaña.png' %}" class="lasaña_img">
+                <h3>Lasaña Personal</h3>
+                <p>Queso, champiñones, pasta, carne y pollo desmechado, chorizo y pan tajado
+                    <button class="botones_lasaña">
+                        <img src="{%static 'Menu/imagenes/carrito.png' %}" class="icono">
+                        <span>$9.000</span>
+                    </button>
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+
+{% include "main/includes/footer.html" %}
+
+</html>

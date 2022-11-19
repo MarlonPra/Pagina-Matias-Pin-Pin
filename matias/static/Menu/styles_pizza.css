@@ -1,0 +1,599 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: wheat;
+}
+
+header {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(172, 197, 239, 0.4) 0%, rgba(239, 196, 158, 0.5) 100%), url(imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: initial;
+    width: auto;
+    height: 800px;
+
+}
+
+.menu {
+    padding-top: 27px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    /*-----------Quitar fijacion menu-------*/
+
+    z-index: 100;
+    /*--------------------------------------*/
+}
+
+/*------------MENU MARLON---------------*/
+nav {
+    margin: 0px auto 0;
+    position: relative;
+    width: 540px;
+    height: 50px;
+    background-color: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+a:nth-child(1) {
+    width: 100px;
+}
+
+a:nth-child(2) {
+    width: 120px;
+}
+
+a:nth-child(3) {
+    width: 120px;
+}
+
+a:nth-child(4) {
+    width: 100px;
+}
+
+a:nth-child(5) {
+    width: 100px;
+}
+
+nav .start-home,
+a:nth-child(3):hover~.animation {
+    width: 120px;
+    left: 220px;
+    background-color: #3498db;
+}
+
+nav .start-about,
+a:nth-child(2):hover~.animation {
+    width: 120px;
+    left: 100px;
+    background-color: #e74c3c;
+}
+
+nav .start-blog,
+a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+}
+
+nav .start-portefolio,
+a:nth-child(4):hover~.animation {
+    width: 100px;
+    left: 340px;
+    background-color: #9b59b6;
+}
+
+nav .start-contact,
+a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 440px;
+    background-color: #e67e22;
+}
+
+/*-------------------Texto menu------------------------*/
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.head {
+    text-align: center;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FF9800;
+}
+
+.head h1 {
+    font-weight: 300;
+    font-size: 100px;
+    font-family: bigfatscript;
+    text-shadow: 3px 3px 0px #00B7BD, 5px 5px 0px #00B7BD
+}
+
+.copy h3 {
+    font-size: 35px;
+    color: #1E1E1E;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    overflow: hidden;
+    border-right: .15em solid #1E1E1E;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 0px 5px 10px 0px;
+    letter-spacing: .15em;
+    animation:
+        typing 3s steps(20, end),
+        blink-caret .5s step-end infinite;
+    text-shadow: 3px 3px 0px #00B7BD,
+        5px 5px 0px #FFCD00;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}
+
+@font-face {
+    font-family: bigfatscript;
+    src: url("Fuentes/Bigfat Script.ttf");
+}
+
+/*---------------------------------SECCION PIZZA--------------------------------------*/
+.seccion_pizza {
+    overflow: hidden;
+}
+
+.seccion_pizza h1 {
+    font-family: bigfatscript;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 300;
+    color: #fff;
+    background-color: #FFCD00;
+    margin-bottom: 50px;
+}
+
+.imagenes_pizza {
+    height: auto;
+    width: 90%;
+    overflow: hidden;
+    margin-left: 9vh;
+}
+
+.imagenes_pizza h2 {
+    height: 125px;
+    width: 40%;
+    margin-left: 60vh;
+    border-radius: 10px;
+    font-family: bigfatscript;
+    text-align: center;
+    font-size: 80px;
+    color: #fff;
+}
+
+.imagenes_pizza1 {
+    background-color: #FFCD00;
+    border: 10px solid #FFCD00;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.imagenes_pizza1 h3 {
+    margin-left: 14.5vh;
+    height: auto;
+    text-align: center;
+    width: 200px;
+    float: left;
+    border-radius: 10px;
+    font-size: 35px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.imagenes_pizzas img {
+    width: 200px;
+    height: auto;
+    margin-left: 14vh;
+    margin-top: 5px;
+}
+
+.imagenes_pizzas {
+    border: 10px solid #FFCD00;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.imagenes_pizzas p {
+    float: left;
+    text-align: center;
+    margin-left: 17vh;
+    font-family: 'Baloo 2', cursive;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.imagenes_pizza2 {
+    background-color: #FFCD00;
+    border: 10px solid #FFCD00;
+    overflow: hidden;
+}
+
+.imagenes_pizza2 h3 {
+    margin-left: 14.5vh;
+    height: auto;
+    text-align: center;
+    width: 200px;
+    float: left;
+    border-radius: 10px;
+    font-size: 35px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.contenedor_pizza {
+    overflow: hidden;
+    height: auto;
+    width: 90%;
+    margin-left: 9vh;
+    display: flex;
+}
+
+.panzeroti {
+    border-radius: 10px;
+    margin-top: 30px;
+    border: 10px solid #FFCD00;
+    overflow: hidden;
+    width: 48%;
+    height: 45vh;
+}
+
+.panzeroti img {
+    margin-left: 50px;
+    width: 250px;
+    height: auto;
+    float: left;
+}
+
+.panzeroti h3 {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 55px;
+    color: #fff;
+    background-color: #FFCD00;
+    width: 40%;
+    float: right;
+    height: auto;
+    margin-top: 15px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.panzeroti p {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    width: 40%;
+    float: right;
+    height: auto;
+    margin-top: 15px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.panzeroti h2 {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    width: 40%;
+    float: right;
+    height: auto;
+    margin-top: 15px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.porciones{
+    border-radius: 10px;
+    margin-top: 30px;
+    border: 10px solid #FFCD00;
+    overflow: hidden;
+    width: 48%;
+    height: 101.5vh; 
+    margin-left: 20px;
+}
+.porciones h3 {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 55px;
+    color: #fff;
+    background-color: #FFCD00;
+    width: 40%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    margin-left: 25vh;
+}
+
+.porciones p {
+    font-family: 'Baloo 2', cursive;
+    text-align: left;
+    font-size: 20px;
+    color: black;
+    width: 100%;
+    float: left;
+    height: auto;
+    margin-top: 15px;
+}
+
+.porciones h2 {
+    font-family: 'Baloo 2', cursive;
+    text-align: left;
+    font-size: 30px;
+    color: black;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+.patacon {
+    border-radius: 10px;
+    margin-top: 55vh;
+    overflow: hidden;
+    width: 43%;
+    border: 10px solid #FFCD00;
+    height: auto;
+    float: left;
+    position: absolute;
+}
+
+.patacon h3 {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 55px;
+    color: #fff;
+    background-color: #FFCD00;
+    width: 60%;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 17vh;
+    border-radius: 10px;
+}
+
+.patacon p {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 19px;
+    color: black;
+    width: 56%;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 19vh;
+}
+
+.patacon h2 {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    width: 40%;
+    height: auto;
+    margin-left: 27vh;
+}
+.patacon h4{
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 19px;
+    color: black;
+    width: 56%;
+    height: auto;
+    margin-left: 20vh;
+}
+.contenedor_lasaña{
+    width: 90%;
+    overflow: hidden;
+    margin-left: 9vh;
+    height: auto;
+}
+.lasaña{
+    border: 10px solid #FFCD00;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.lasaña h3 {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 55px;
+    color: #fff;
+    background-color: #FFCD00;
+    width: 40%;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 57vh;
+    border-radius: 10px;
+}
+.lasaña p {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 19px;
+    color: black;
+    width: 56%;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 40vh;
+}
+.lasaña h2 {
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    width: 40%;
+    height: auto;
+    margin-left: 56vh;
+}
+.lasaña img{
+    margin-top: 20px;
+    width: 400px;
+    height: autos;
+    margin-left: 66vh;
+}
+/*|------------------------------------------------FOOTER-----------------------------------------------------------|*/
+footer {
+    width: 100%;
+    padding: 30px 0px 10px 0px;
+    background-size: cover;
+    background-color: #253443;
+    margin-top: 50px;
+    list-style: none;
+    color: white;
+}
+
+.footertodo {
+    display: flex;
+    width: 80%;
+    border-top: 1px solid #2a4764;
+    margin: 0 10%;
+    padding-bottom: 2%;
+    padding-top: 1%;
+}
+
+.menufoot {
+    width: 20%;
+    margin: 0 8%;
+}
+
+.menufoot h2 {
+    margin-left: 10px;
+    color: #00B7BD;
+    text-shadow: 2px -1px 0px #1a538d, 3px -2px 0px #1b76d0;
+}
+
+.menufoot li a {
+    color: white;
+}
+
+.contactanos {
+    width: 20%;
+    margin: 0 8%;
+}
+
+.contactanos h2 {
+    margin-left: 10px;
+    color: #00B7BD;
+    text-shadow: 2px -1px 0px #1a538d, 3px -2px 0px #1b76d0;
+}
+
+.contactanos li {
+    margin: 2% 0;
+}
+
+.cont-icon {
+    width: 20%;
+    text-align: center;
+    margin: 0 7%;
+}
+
+.cont-icon h2 {
+    width: 100%;
+    color: #00B7BD;
+    text-shadow: 2px -1px 0px #1a538d, 3px -2px 0px #1b76d0;
+}
+
+.icon {
+    display: flex;
+    /*padding-left: 35%;*/
+    margin-top: 30px;
+    margin-left: 16%;
+}
+
+.icon a {
+    width: auto;
+    margin: 0 3px;
+}
+
+.colorear {
+    font-size: 30px;
+    margin-left: 1%;
+}
+
+.bxl-facebook-circle {
+    color: #4267B2;
+}
+
+.bxl-twitter {
+    color: #1DA1F2;
+}
+
+.bxl-instagram-alt {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.bxl-youtube {
+    color: #FF0000;
+}
+
+.dautor {
+    text-align: center;
+    border-top: 1px solid #2a4764;
+    padding-top: 2%;
+    width: 80%;
+    margin: 0 10%;
+
+}

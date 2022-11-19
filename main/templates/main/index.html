@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Matias PIN PIN</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <!-- ------------------------------ -->
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ------------------------------ -->
+</head>
+<header>
+    <div class="menu1">
+        {% include "main/includes/navbar.html" %}
+    </div>
+    {% if messages %}
+        {% for message in messages %}
+        <!-- |------------------------------success----------------------------------------| -->
+            {% if message.tags == 'success' %}
+                <script>
+                    $(function(){
+                        toastr.success("{{message}}", "" , {timeOut: 2000})
+                    });
+                </script>
+            {% endif %}
+        <!-- |------------------------------error----------------------------------------| -->
+            {% if message.tags == 'error' %}
+                <script>
+                    $(function(){
+                        toastr.error("{{message}}", "" , {timeOut: 2000})
+                    });
+                </script>
+            {% endif %}
+        <!-- |------------------------------warning----------------------------------------| -->
+            {% if message.tags == 'warning' %}
+                <script>
+                    $(function(){
+                        toastr.warning("{{message}}", "" , {timeOut: 2000})
+                    });
+                </script>
+            {% endif %}
+        <!-- |------------------------------info----------------------------------------| -->
+            {% if message.tags == 'info' %}
+                <script>
+                    $(function(){
+                        toastr.info("{{message}}", "" , {timeOut: 2000})
+                    });
+                </script>
+            {% endif %}
+        {% endfor %}
+        
+    {% endif %}
+    
+    <div class="contenedor head">
+        <h1>Matias Pin Pin</h1>
+        <div class="copy">
+            <h3>Un lugar para ser feliz</h3>
+        </div>
+    </div>
+</header>
+
+<body>
+    <main>
+        <!-- |-----------SLIDER FOTOS PROMOCIONES-------------------| -->
+        <!-- Image Slider Start -->
+        <div class="slider">
+            <div class="slides">
+                <!-- Radio Button Start  -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!-- Radio Button Close  -->
+                <!-- Slide Image Start -->
+                <div class="slide first">
+                    <img src="{%static 'img/comida.jpg' %}" alt="">
+                </div>
+                <div class="slide">
+                    <img src="{% static 'img/Meseros.jpg' %}" alt="">
+                </div>
+                <div class="slide">
+                    <img src="{% static 'img/fondo.jpg' %}" alt="">
+                </div>
+                <div class="slide">
+                    <img src="{% static 'img/reseña4.jpg' %}" alt="">
+                </div>
+                <!-- Slide Image Close -->
+                <!-- Automatic Navigation Start -->
+                <div class="navigation-auto">
+                    <div class="auto-btn-1"></div>
+                    <div class="auto-btn-2"></div>
+                    <div class="auto-btn-3"></div>
+                    <div class="auto-btn-4"></div>
+                </div>
+                <!-- Automatic Navigation Close -->
+            </div>
+            <!-- Mannual Navigation Start -->
+            <div class="navigation-mannual">
+                <label for="radio1" class="mannual-btn"></label>
+                <label for="radio2" class="mannual-btn"></label>
+                <label for="radio3" class="mannual-btn"></label>
+                <label for="radio4" class="mannual-btn"></label>
+            </div>
+            <!-- Mannual Navigation Close -->
+        </div>
+        <!-- Image Slider Close -->
+        <!-- |------------------------Divs Comida rapida--------------------------| -->
+        <div class="titulo">
+            <h1>Comidas Rápidas</h1>
+        </div>
+        <div class="comida_rapida">
+            <div class="subcomida" id="comidasub">
+                <div class="imgcomida">
+                    <img src="{% static 'img/comida rapida/picada pin pin.png' %}" id="com1">
+                </div>
+                <div class="textocomida" id="textocomida1">
+                    <h3>Picada pin pin</h3>
+                    <p>Carne de cerdo, res, pollo, chorizo de las brisas, papa criolla, papa a la francesa, patacón, tomate, lechuga, queso fundido, papa ripio, huevo de codorniz, salsa de ajo, salsa de la casa.</p>
+                </div>
+            </div>
+            <div class="subcomida" id="comidasub2">
+                <div class="imgcomida">
+                    <img src="{% static 'img/comida%20rapida/arepa%20hamburguesa.png' %}" id="com2">
+                </div>
+                <div class="textocomida" id="textocomida2">
+                    <h3>Arepa Hamburguesa</h3>
+                    <p>Carne de hamburguesa res, arepa, tocineta, queso, tomate, huevo, lechuga, ripio y salsa de la casa.</p>
+                </div>
+            </div>
+            <div class="subcomida" id="comidasub3">
+                <div class="imgcomida">
+                    <img src="{% static 'img/comida%20rapida/mazorcada.png' %}" id="com3">
+                </div>
+                <div class="textocomida" id="textocomida3">
+                    <h3>Mazorcada</h3>
+                    <p>Maíz, carne desmechada, pollo desmechado, chorizo, champiñones, salsa de la casa, queso, papa ripio y papa a la francesa.</p>
+                </div>
+            </div>
+        </div>
+        <!-- |------------------------------------------------------------| -->
+        <!-- |------------------------Divs Pizza--------------------------| -->
+        <div class="titulopizz">
+            <h1>Pizzería</h1>
+        </div>
+        <div class="pizza">
+            <div class="subpizza">
+                <div class="imgpizza">
+                    <img src="{% static 'img/pizeria/foto%20pizza.png' %}" id="com1">
+                </div>
+                <div class="textopizza">
+                    <h3>Pizza</h3>
+                    <p>Tú eliges (Hawaiana, criollo, pepperoni, mixto, mexicano, champipollo)</p>
+                </div>
+            </div>
+            <div class="subpizza">
+                <div class="imgpizza">
+                    <img src="{% static 'img/pizeria/lasaña.png' %}" id="com2">
+                </div>
+                <div class="textopizza">
+                    <h3>Lasaña Personal</h3>
+                    <p>Queso, champiñones, pasta, carne y pollo desmechado, chorizo y pan tajado.</p>
+                </div>
+            </div>
+            <div class="subpizza">
+                <div class="imgpizza">
+                    <img src="{% static 'img/pizeria/panzeroti.png' %}" id="com3">
+                </div>
+                <div class="textopizza">
+                    <h3>Panzzeroti</h3>
+                    <p>Tú eliges (Hawaiana, criollo, pepperoni, mixto, mexicano, champipollo)</p>
+                </div>
+            </div>
+        </div>
+        <!-- |------------------------------------------------------------| -->
+        <!-- |------------------------Divs Heladeria--------------------------| -->
+        <div class="titulohel">
+            <h1>Heladeria</h1>
+        </div>
+        <div class="helado">
+            <div class="subhelado">
+                <div class="imghelado">
+                    <img src="{% static 'img/heladeria/malteada%20planetaria.png' %}" id="com1">
+                </div>
+                <div class="textohelado">
+                    <h3>Malteada Planetaria</h3>
+                    <p>Batido de helado acompañado de salsa, grageas, crema de avellanas, gusanitos, galletas mini chips, cono y chantillí.</p>
+                </div>
+            </div>
+            <div class="subhelado">
+                <div class="imghelado">
+                    <img src="{% static 'img/heladeria/super%20banana%20split.png' %}" id="com2">
+                </div>
+                <div class="textohelado">
+                    <h3>Súper Banana Split</h3>
+                    <p>Tres porciones de helado acompañado de banano, queso, salsa de mora, salsa de chocolate, manzana, fresa, maní, chantillí y barquillo.</p>
+                </div>
+            </div>
+            <div class="subhelado">
+                <div class="imghelado">
+                    <img src="{% static 'img/heladeria/copa%20tropical.png' %}" id="com3">
+                </div>
+                <div class="textohelado">
+                    <h3>Copa Tropical</h3>
+                    <p>Tres porciones de helado, acompañado de queso, gelatina, chantillí, leche condensada, sandia, fresa, kiwi y barquillo.</p>
+                </div>
+            </div>
+        </div>
+        <!-- |------------------------------------------------------------| -->
+        <section class="contenedor1">
+            <h2 class="subtitulo" id="servicios" style="text-align: center; height: 100px; margin-right: 10px; margin-top: 4%;">
+                NUESTROS SERVICIOS</h2>
+            <div class="spa">
+                <div class="spa2">
+                    <h2 class="titulo1">Meseros</h2>
+                    <p class="subtitulo1">Tenemos variedad de Meseros con una buena atencion y buena habilidad para sus labores, gracias a ello nuestro servicio es el mejor.</p>
+                </div>
+                <div class="spa3">
+                    <img class="img-ser" src="{% static 'img/Meseros.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="restaurante">
+                <div class="restaurante2">
+                    <img class="img-ser" src="{% static 'img/domicilios.jpg' %}" alt="">
+                </div>
+                <div class="restaurante3">
+                    <h2 class="titulo1">Domicilios</h2>
+                    <p class="subtitulo1">Tenemos domicilios para cualquier parte de neiva, buena presentacion y velicidad de entrega.</p>
+                </div>
+            </div>
+            <div class="parqueadero">
+                <div class="parqueadero2">
+                    <h2 class="titulo1">Reservaciones</h2>
+                    <p class="subtitulo1">Llama a nuestros numeros de contacto para pedir tu reserva en nuestros diferentes lugares, ya sea primer piso VIP o Segundo piso VIP2.</p>
+                </div>
+                <div class="parqueadero3">
+                    <img class="img-ser" src="{% static 'img/reservaciones.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="piscina">
+                <div class="piscina2">
+                    <img class="img-ser" src="{% static 'img/comida.jpg' %}" alt="">
+                </div>
+                <div class="piscina3">
+                    <h2 class="titulo1">Variedad de Comidas</h2>
+                    <p class="subtitulo1">Nuestro Menu tiene muchos tipos de comida como pizzeria, heladeria y comida rapida, gracias a ello es un lugar para hacerte feliz.</p>
+                </div>
+            </div>
+        </section>
+        <section class="mapa">
+            <iframe class="mapa2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.535166809758!2d-75.30391184986989!3d2.948869955163487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b7551a624e6e1%3A0x276b54613eb8a400!2sMatias%20Pin%20Pin!5e0!3m2!1ses-419!2sco!4v1663022895873!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+</body>
+{% include "main/includes/footer.html" %}
+<script src="slider.js"></script>
+</html>

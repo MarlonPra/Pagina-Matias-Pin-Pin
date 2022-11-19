@@ -1,0 +1,76 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'carrito.css' %}">
+<nav>
+    <a href="/">Inicio</a>
+    <a href=" /carta ">Carta</a>
+    <a href="/galeria">Galeria</a>
+    {% if user.is_authenticated %}
+    <a href="#">Perfil</a>
+    <a href="/logout">Salir</a>
+    {% else %}
+    <a href="/register">Registrate</a>
+    <a href="/login">Login</a>
+    {% endif %}
+    <div class="animation start-home"></div>
+    <img src="{% static 'img/carrito.png' %}" class="carritoimg" alt="carrito1" id="cart-icon">
+</nav>
+<div class="cart" id="cart_shop">
+    <div class="titulo_carro">
+        <h1>CARRO DE COMPRAS</h1>
+    </div>
+    <div class="contenido_carro">
+        {% if request.session.carro.items %}
+
+            {% for key,value in request.session.carro.items  %}
+                <div class="contenido_todo">
+            <div class="cont1">
+                <div class="cont_carro">
+                    <div class="name_carro">
+                        <h2>{{value.nombre}}</h2>
+                    </div>
+                    <div class="cantidad_carro">
+                        <p>{{value.cantidad}}</p>
+                    </div>
+                    <div class="botones_carro">
+                        <a href="{% url 'main:restar' value.producto_id %}" class="botones_car">-</a>
+                        <a href="{% url 'main:agregar' value.producto_id %}" class="botones_car">+</a>
+                    </div>
+                </div>
+                <div class="cont_carro">
+                    <h3 class="precio_carro">{{value.precio}}</h3>
+                </div>
+            </div>
+            <div class="cont2">
+                <div class="cont_carro_prim">
+                    <label for="carte">Selecciona tipo de carne:</label>
+                    <select name="carte" id="carte">
+                        <option value="res">res</option>
+                        <option value="Cerdo">Cerdo</option>
+                        <option value="Pollo">Pollo</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+                
+            {% endfor %}
+
+        {% else %}
+            <div class="carro_vacio">
+                <h1>
+                    CARRO VACIO
+                </h1>
+            </div>
+            
+        {% endif %}
+        
+    </div>
+    <div class="observacion_carro">
+        <h3 class="observacion">Observaciones:</h3>
+        <textarea name="observaciones" class="texto_carro_area"></textarea>
+    </div>
+    <div class="valor_boton">
+      <h1 class="texto_carro"> <span class="texto_carro_total">Total:</span> {{importe_total_carro}} COP</h1>
+      <a href="#" class="boton_carrito">Comprar</a> 
+    </div>
+</div>
+<script src="{%static 'main.js' %}"></script>
