@@ -1,8 +1,98 @@
 @font-face{
-    font-family: bigfatscript;
-    src:  url("Fuentes/Bigfat Script.ttf");
+    font-family: Bigfat;
+    src:  url("Fuentes/Bigfat.ttf");
 }
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+/*------------MENU MARLON---------------*/
+nav {
+    margin: 0px auto 0;
+    position: relative;
+    width: 560px;
+    height: 50px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    font-size: 0;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+nav a:nth-child(1) {
+    width: 100px;
+}
+
+nav a:nth-child(2) {
+    width: 120px;
+}
+
+nav a:nth-child(3) {
+    width: 120px;
+}
+
+nav a:nth-child(4) {
+    width: 100px;
+    padding: 0 10px;
+}
+
+nav a:nth-child(5) {
+    width: 100px;
+}
+
+nav .start-about,
+a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #FF9800;
+}
+
+nav .start-home,
+a:nth-child(2):hover~.animation {
+    width: 120px;
+    left: 100px;
+    background-color: #FFCD00;
+}
+
+nav .start-blog,
+a:nth-child(3):hover~.animation {
+    width: 120px;
+    left: 220px;
+    background-color: #00B7BD;
+}
+
+nav .start-portefolio,
+a:nth-child(4):hover~.animation {
+    width: 120px;
+    left: 340px; /*666.350 - 592.312*/
+    background-color: #FF9800;
+}
+
+nav .start-contact,
+a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 460px; /*  74.038*/ 
+    background-color: #FFCD00;
+}
 /*|----------------------Carrito--------------------------------|*/
 .carritoimg{
     width: 60px;
@@ -53,7 +143,7 @@
     margin-bottom: 10px;
 }
 .cont2{
-    display: flex;
+    padding-bottom: 10px;
 }
 .cont_carro{
     text-align: center;
@@ -151,4 +241,20 @@
     font-size: 100px;
     font-family: 'Baloo 2', cursive;
     text-shadow: 3px 9px 8px black;
+}
+.sabor1{
+    background-color: rgba(255,152,0,0.5);
+    padding: 6px 2px;
+    width: 92%;
+    margin: 9px 2%;
+    border-radius: 9px;
+    border: 5px solid #FFCD00;
+}
+.sabor1 select{
+    background-color: #00B7BD;
+    color: black;
+    border-radius: 6px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 17px;
+    margin-left: 2%;
 }

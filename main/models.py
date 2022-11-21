@@ -33,9 +33,34 @@ class producto(models.Model):
     tipo = models.CharField(max_length=20, default='H', choices=tipop)
     precio = models.FloatField(blank=True)
     estado = models.BooleanField(default=True)
+    bolas_helado = models.CharField(max_length=1, null=True, blank=True)
+    tipo_carne = models.CharField(max_length=1, null=True, blank=True)
+    corte_pizza = models.CharField(max_length=1, null=True, blank=True)
 
     def __str__(self):
         return str(self.id) + " " + str(self.nombrep)
+
+    class Meta:
+        ordering = ["id"]
+
+
+class shelados(models.Model):
+    nombres = models.CharField(max_length=25)
+    Estado = models.BooleanField(default=True)
+
+    def __str__(self):
+        return str(self.id) + " " + str(self.nombres)
+
+    class Meta:
+        ordering = ["id"]
+
+
+class spizza(models.Model):
+    nombres = models.CharField(max_length=25)
+    Estado = models.BooleanField(default=True)
+
+    def __str__(self):
+        return str(self.id) + " " + str(self.nombres)
 
     class Meta:
         ordering = ["id"]

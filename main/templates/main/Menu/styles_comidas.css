@@ -37,96 +37,6 @@ header {
     /*--------------------------------------*/
 }
 
-/*------------MENU MARLON---------------*/
-nav {
-    margin: 0px auto 0;
-    position: relative;
-    width: 560px;
-    height: 50px;
-    background-color: #1E1E1E;
-    border-radius: 8px;
-    font-size: 0;
-}
-
-nav a {
-    line-height: 50px;
-    height: 100%;
-    font-size: 20px;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    cursor: pointer;
-}
-
-nav .animation {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    z-index: 0;
-    transition: all .5s ease 0s;
-    border-radius: 8px;
-}
-
-a:nth-child(1) {
-    width: 100px;
-}
-
-a:nth-child(2) {
-    width: 120px;
-}
-
-a:nth-child(3) {
-    width: 120px;
-}
-
-a:nth-child(4) {
-    width: 100px;
-    padding: 0 10px;
-}
-
-a:nth-child(5) {
-    width: 100px;
-}
-
-nav .start-about,
-a:nth-child(1):hover~.animation {
-    width: 100px;
-    left: 0;
-    background-color: #FF9800;
-}
-
-nav .start-home,
-a:nth-child(2):hover~.animation {
-    width: 120px;
-    left: 100px;
-    background-color: #FFCD00;
-}
-
-nav .start-blog,
-a:nth-child(3):hover~.animation {
-    width: 120px;
-    left: 220px;
-    background-color: #00B7BD;
-}
-
-nav .start-portefolio,
-a:nth-child(4):hover~.animation {
-    width: 120px;
-    left: 340px; /*666.350 - 592.312*/
-    background-color: #FF9800;
-}
-
-nav .start-contact,
-a:nth-child(5):hover~.animation {
-    width: 100px;
-    left: 460px; /*  74.038*/ 
-    background-color: #FFCD00;
-}
-
 /*-------------------Texto menu------------------------*/
 .contenedor {
     width: 90%;
@@ -582,14 +492,14 @@ a:nth-child(5):hover~.animation {
     overflow: hidden;
 }
 
-button span {
+a span {
     transition: all 5s ease-out;
     position: absolute;
     align-items: center;
     display: flex;
 }
 
-button.botones_gaseosas img {
+.botones_gaseosas img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -599,16 +509,16 @@ button.botones_gaseosas img {
     left: 5px;
 }
 
-button.botones_gaseosas:hover {
+.botones_gaseosas:hover {
     transition: all 500ms ease-out;
 }
 
-button.botones_gaseosas:hover img {
+.botones_gaseosas:hover img {
     left: calc(100% - 50px);
     opacity: 1;
 }
 
-button.botones_gaseosas:hover span {
+.botones_gaseosas:hover span {
     transition: all 100s ease-out;
 }
 
@@ -636,7 +546,7 @@ span {
     overflow: hidden;
 }
 
-button.botones_gaseosas1 img {
+.botones_gaseosas1 img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -646,16 +556,16 @@ button.botones_gaseosas1 img {
     left: 5px;
 }
 
-button.botones_gaseosas1:hover {
+.botones_gaseosas1:hover {
     transition: all 500ms ease-out;
 }
 
-button.botones_gaseosas1:hover img {
+.botones_gaseosas1:hover img {
     left: calc(100% - 50px);
     opacity: 1;
 }
 
-button.botones_gaseosas1:hover span {
+.botones_gaseosas1:hover span {
     transition: all 100s ease-out;
 }
 
@@ -666,7 +576,7 @@ button.botones_gaseosas1:hover span {
     background-color: #FF9800;
     justify-content: left;
     width: 100%;
-    height: 75px;
+    height: 80px;
     color: black;
     font-size: 20px;
     font-weight: 500;
@@ -679,7 +589,7 @@ button.botones_gaseosas1:hover span {
     overflow: hidden;
 }
 
-button.botones_gaseosas2 img {
+.botones_gaseosas2 img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -689,16 +599,16 @@ button.botones_gaseosas2 img {
     left: 5px;
 }
 
-button.botones_gaseosas2:hover {
+.botones_gaseosas2:hover {
     transition: all 500ms ease-out;
 }
 
-button.botones_gaseosas2:hover img {
+.botones_gaseosas2:hover img {
     left: calc(100% - 50px);
     opacity: 1;
 }
 
-button.botones_gaseosas2:hover span {
+.botones_gaseosas2:hover span {
     transition: all 100s ease-out;
 }
 
@@ -724,13 +634,8 @@ button.botones_gaseosas2:hover span {
     overflow: hidden;
 }
 
-button span {
-    transition: all 5s ease-out;
-    position: absolute;
-    align-items: center;
-}
 
-button.botones_gaseosas3 img {
+.botones_gaseosas3 img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -740,16 +645,16 @@ button.botones_gaseosas3 img {
     left: 5px;
 }
 
-button.botones_gaseosas3:hover {
+.botones_gaseosas3:hover {
     transition: all 500ms ease-out;
 }
 
-button.botones_gaseosas3:hover img {
+.botones_gaseosas3:hover img {
     left: calc(100% - 50px);
     opacity: 1;
 }
 
-button.botones_gaseosas3:hover span {
+.botones_gaseosas3:hover span {
     transition: all 100s ease-out;
 }
 
@@ -764,11 +669,11 @@ button.botones_gaseosas3:hover span {
 }
 
 .botones_gaseosas4 {
-    margin-left: 45px;
+    margin-left: 30px;
     font-family: 'Baloo 2', cursive;
     display: inline-flex;
     background-color: #FF9800;
-    width: 25%;
+    width: 32%;
     margin-top: 10px;
     height: 40px;
     overflow: hidden;
@@ -783,14 +688,8 @@ button.botones_gaseosas3:hover span {
     position: relative;
 }
 
-button span {
-    transition: all 5s ease-out;
-    position: absolute;
-    text-align: center;
-    align-items: center;
-}
 
-button.botones_gaseosas4 img {
+.botones_gaseosas4 img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -798,22 +697,23 @@ button.botones_gaseosas4 img {
     transition: .3s ease-in-out all;
     opacity: 0;
     left: 5px;
+    top: 4px;
 }
 
-button.botones_gaseosas4:hover {
+.botones_gaseosas4:hover {
     transition: all 500ms ease-out;
 }
 
-button.botones_gaseosas4:hover img {
-    left: calc(100% - 50px);
+.botones_gaseosas4:hover img {
+    left: calc(100% - 35px);
     opacity: 1;
 }
 
-button.botones_gaseosas4:hover span {
+.botones_gaseosas4:hover span {
     transition: all 100s ease-out;
 }
 /*---------------------------------BOTON 6--------------------------------------*/
-button {
+/*a {
     font-family: 'Baloo 2', cursive;
     display: inline-flex;
     align-items: center;
@@ -831,7 +731,7 @@ button {
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-}
+}*/
 .botones_gaseosas5 {
     margin-left: 12vh;
     font-family: 'Baloo 2', cursive;
@@ -849,19 +749,11 @@ button {
     border: none;
     cursor: pointer;
     text-transform: uppercase;
-    transition: .3s ease all;
     border-radius: 5px;
     position: relative;
 }
 
-button span {
-    transition: all 5s ease-out;
-    position: absolute;
-    text-align: center;
-    align-items: center;
-}
-
-button.botones_gaseosas5 img {
+.botones_gaseosas5 img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -871,20 +763,16 @@ button.botones_gaseosas5 img {
     left: 5px;
 }
 
-button.botones_gaseosas5:hover {
+.botones_gaseosas5:hover {
     background: linear-gradient(90deg, #FF9800 0%, #FF9800 45%, #FF9800 84%) ;
     transition: all 500ms ease-out;
 }
 
-button.botones_gaseosas5:hover img {
+.botones_gaseosas5:hover img {
     left: calc(100% - 50px);
     opacity: 1;
 }
 
-button.botones_gaseosas5:hover span {
-    left: 20px;
-    transition: all 100s ease-out;
-}
 /*---------------------------------BOTON 7--------------------------------------*/
 .text_comidas1 {
     overflow: hidden;
@@ -924,14 +812,7 @@ button.botones_gaseosas5:hover span {
     position: relative;
 }
 
-button span {
-    transition: all 5s ease-out;
-    position: absolute;
-    text-align: center;
-    align-items: center;
-}
-
-button.botones_gaseosas6 img {
+.botones_gaseosas6 img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -941,17 +822,31 @@ button.botones_gaseosas6 img {
     left: 5px;
 }
 
-button.botones_gaseosas6:hover {
+.botones_gaseosas6:hover {
     transition: all 500ms ease-out;
 }
 
-button.botones_gaseosas6:hover img {
+.botones_gaseosas6:hover img {
     left: calc(100% - 50px);
     opacity: 1;
 }
 
-button.botones_gaseosas6:hover span {
+.botones_gaseosas6:hover span {
     transition: all 100s ease-out;
+}
+
+.boton_porc{
+    font-family: 'Baloo 2', cursive;
+    display: inline-flex;
+    background-color: #FF9800;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 3px 16px;
+    text-decoration: none;
 }
 /*|-----------------------FOOTER------------------------|*/
 footer {

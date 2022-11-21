@@ -19,10 +19,10 @@
         <h1>CARRO DE COMPRAS</h1>
     </div>
     <div class="contenido_carro">
+        {% if user.is_authenticated %}
         {% if request.session.carro.items %}
-
-            {% for key,value in request.session.carro.items  %}
-                <div class="contenido_todo">
+        {% for key,value in request.session.carro.items %}
+        <div class="contenido_todo">
             <div class="cont1">
                 <div class="cont_carro">
                     <div class="name_carro">
@@ -42,35 +42,125 @@
             </div>
             <div class="cont2">
                 <div class="cont_carro_prim">
-                    <label for="carte">Selecciona tipo de carne:</label>
-                    <select name="carte" id="carte">
+                    {% if value.categoria == "H" %}
+                    {% if value.bolas_h == "3" %}
+                    <div class="sabor1">
+                        <label for="hel1">Primer Sabor: </label>
+                        <select name="hel1" id="hel1">
+                            {% for i in shelado %}
+                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="sabor1">
+                        <label for="hel2">Segundo Sabor: </label>
+                        <select name="he2" id="hel2">
+                            {% for i in shelado %}
+                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="sabor1">
+                        <label for="hel3">Tercer Sabor: </label>
+                        <select name="he3" id="hel3">
+                            {% for i in shelado %}
+                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    {% elif value.bolas_h == "2" %}
+                    <div class="sabor1">
+                        <label for="hel1">Primer Sabor: </label>
+                        <select name="hel1" id="hel1">
+                            {% for i in shelado %}
+                                {% if i.Estado == True  %}
+                                    <option value="{{i.nombres}}">{{i.nombres}}</option>
+                                {% else %}
+                                    <p>Hola</p>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="sabor1">
+                        <label for="hel2">Segundo Sabor: </label>
+                        <select name="he2" id="hel2">
+                            {% for i in shelado %}
+                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    {% elif value.bolas_h == "1" %}
+                    <div class="sabor1">
+                        <label for="hel1">Primer Sabor: </label>
+                        <select name="hel1" id="hel1">
+                            {% for i in shelado %}
+                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    {% else %}
+                    {% endif %}
+                    {% elif value.categoria == "PZ" %}
+                    {% if value.corte_pizza == "2" %}
+                    <label for="pizz1">Sabor Pizza1:</label>  
+                    <select name="pizz1" id="pizz1">
                         <option value="res">res</option>
                         <option value="Cerdo">Cerdo</option>
                         <option value="Pollo">Pollo</option>
                     </select>
+                    <label for="pizz2">Sabor Pizza2:</label>
+                    <select name="pizz2" id="pizz2">
+                        <option value="res">res</option>
+                        <option value="Cerdo">Cerdo</option>
+                        <option value="Pollo">Pollo</option>
+                    </select>
+                    {% else %}
+                    <label for="pizz1">Sabor Pizza1:</label>
+                    <select name="pizz1" id="pizz1">
+                        {% for i in spizza %}
+                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                        {% endfor %}
+                    </select>
+                    {% endif %}
+                    {% elif value.categoria == "CR" %}
+                    {% if value.tipo_carn == "2" %}
+                    <label for="rapida">Selecciona tipo de carne:</label>
+                    <select name="rapida" id="rapida">
+                        <option value="Cerdo">Cerdo</option>
+                        <option value="Pollo">Pollo</option>
+                    </select>
+                    {% else %}
+                    {% endif %}
+                    {% else %}
+                    <h1>HOLA</h1>
+                    </select>
+                    {% endif %}
                 </div>
             </div>
         </div>
-                
-            {% endfor %}
-
+        {% endfor %}
+        {% else %}
+        <div class="carro_vacio">
+            <h1>
+                CARRO VACIO
+            </h1>
+        </div>
+        {% endif %}
         {% else %}
             <div class="carro_vacio">
-                <h1>
-                    CARRO VACIO
-                </h1>
-            </div>
-            
+            <h1>
+                INICIA SESION
+            </h1>
+        </div>
         {% endif %}
-        
     </div>
     <div class="observacion_carro">
         <h3 class="observacion">Observaciones:</h3>
         <textarea name="observaciones" class="texto_carro_area"></textarea>
     </div>
     <div class="valor_boton">
-      <h1 class="texto_carro"> <span class="texto_carro_total">Total:</span> {{importe_total_carro}} COP</h1>
-      <a href="#" class="boton_carrito">Comprar</a> 
+        <h1 class="texto_carro"> <span class="texto_carro_total">Total:</span> {{importe_total_carro}} COP</h1>
+        <a href="#" class="boton_carrito">Comprar</a>
     </div>
 </div>
 <script src="{%static 'main.js' %}"></script>

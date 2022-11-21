@@ -15,6 +15,10 @@ class Carro:
                 "producto_id": producto.id,
                 "nombre": producto.nombrep,
                 "precio": str(producto.precio),
+                "categoria": producto.tipo,
+                "bolas_h": producto.bolas_helado,
+                "tipo_carn": producto.tipo_carne,
+                "corte_pizza": producto.corte_pizza,
                 "cantidad": 1
             }
         else:

@@ -5,7 +5,7 @@ from django.contrib.auth import logout, authenticate
 from django.contrib.auth import login as login_auth
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
-from .models import usuarios, producto
+from .models import usuarios, producto, shelados, spizza
 from django.shortcuts import render, redirect
 from .carro import Carro
 
@@ -13,35 +13,37 @@ from .carro import Carro
 menu = {"menu": ''}
 
 redirectpagina = 'main:homepage'
+shelados = shelados.objects.all()
+spizza = spizza.objects.all()
 
 
 def homepage(request):
-    return render(request, 'main/index.html')
+    return render(request, 'main/index.html', {"shelado": shelados})
 
 
 def carta(request):
-    return render(request, 'main/Menu/menu.html')
+    return render(request, 'main/Menu/menu.html', {"shelado": shelados})
 
 
 def heladeria(request):
     global redirectpagina
     redirectpagina = request.path_info
     productos = producto.objects.all()
-    return render(request, 'main/Menu/Helados.html', {"productos": productos})
+    return render(request, 'main/Menu/Helados.html', {"productos": productos, "shelado": shelados})
 
 
 def comrapida(request):
     global redirectpagina
     redirectpagina = request.path_info
     productos = producto.objects.all()
-    return render(request, 'main/Menu/Comidas_rapidas.html', {"productos": productos})
+    return render(request, 'main/Menu/Comidas_rapidas.html', {"productos": productos, "shelado": shelados, "spizza": spizza})
 
 
 def pizzeria(request):
     global redirectpagina
     redirectpagina = request.path_info
     productos = producto.objects.all()
-    return render(request, 'main/Menu/pizza.html', {"productos": productos})
+    return render(request, 'main/Menu/pizza.html', {"productos": productos, "shelado": shelados})
 
 
 def bebidas(request):
@@ -52,11 +54,11 @@ def bebidas(request):
 
 
 def galeria(request):
-    return render(request, 'main/galeria/index.html')
+    return render(request, 'main/galeria/index.html', {"shelado": shelados})
 
 
 def domicilios(request):
-    return render(request, 'main/Menu/menu.html')
+    return render(request, 'main/Menu/menu.html', {"shelado": shelados})
 
 
 def login(request):
@@ -131,7 +133,7 @@ def agregar_producto(request, producto_id):
 
 def eliminar_producto(request, producto_id):
     carro = Carro(request)
-    pproducto = producto.objects.get(id = producto_id)
+    pproducto = producto.objects.get(id=producto_id)
     carro.eliminar(producto=pproducto)
     return redirect(redirectpagina)
 
@@ -147,4 +149,3 @@ def limpiar_carro(request):
     carro = Carro(request)
     carro.limpiar_carro()
     return redirect(redirectpagina)
-
