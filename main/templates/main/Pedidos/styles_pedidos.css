@@ -1,0 +1,149 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-image: linear-gradient(to right, #bf5a0f 0%, #fee140 100%);
+	font-family: 'Baloo 2', cursive;
+}
+
+@font-face {
+	font-family: bigfatscript;
+	src: url("Perfil/Fuentes/Bigfat.ttf");
+}
+/*------------MENU MARLON---------------*/
+.menu {
+    padding-top: 27px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    margin-bottom: 50px;
+    /*-----------Quitar fijacion menu-------*/
+    
+    z-index: 100;
+    /*--------------------------------------*/
+}
+
+nav .start-about,
+a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #FF9800;
+}
+
+nav .start-home,
+a:nth-child(2):hover~.animation {
+    width: 120px;
+    left: 100px;
+    background-color: #FFCD00;
+}
+
+nav .start-blog,
+a:nth-child(3):hover~.animation {
+    width: 120px;
+    left: 220px;
+    background-color: #00B7BD;
+}
+
+nav .start-portefolio,
+a:nth-child(4):hover~.animation {
+    width: 120px;
+    left: 340px; /*666.350 - 592.312*/
+    background-color: #FF9800;
+}
+
+nav .start-contact,
+a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 460px; /*  74.038*/ 
+    background-color: #FFCD00;
+}
+/*--------------------------------------*/
+.pedidos{
+	height: auto;
+    width: 90%;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    position: relative;
+    top: 130px;
+}
+.ped_titulo{
+	display: flex;
+	height: 10%;
+	background-color: #FF9800;
+	border-bottom: 2px solid black;
+}
+
+.nombre{
+	width: 50%;
+	margin: 13px 0px;
+	font-size: 20px;
+}
+.nombre h2{
+	margin-left: 3%;
+}
+
+.num_pedido{
+	width: 50%;
+	margin: 13px 0px;
+	display: flex;
+}
+.num_pedido_titulo{
+	width: 80%;
+	text-align: center;
+	font-size: 20px;
+}
+.btn_comp{
+	width: 18%;
+	text-align: center;
+	justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+    border-radius: 15px;
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    background-color: #17E717;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+/*--------------------------------------*/
+
+.ped_contenido{
+	display: flex;
+	background-color: orange;
+}
+.contedino_prod{
+	background-color: #00B7BD;
+	width: 90%;
+}
+.productos_cont{
+	width: 90%;
+	margin: 1% 5%;
+	display: flex;
+	font-size: 20px;
+}
+.name_prod{
+	width: 49%;
+	border-bottom: 2px solid black;
+	padding-left: 1%;
+}
+.cant_prod{
+	width: 49%;
+	border-bottom: 2px solid black;
+	padding-left: 1%;
+	text-align: center;
+}
+.contenido_total{
+	text-align: center;
+	background-color: #FFCD00;
+	width: 10%;
+	border-left:2px solid black ;
+}
+.contenido_total h2{
+	margin-top: 2%;
+}

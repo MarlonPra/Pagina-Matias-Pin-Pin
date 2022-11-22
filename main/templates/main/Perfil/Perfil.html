@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="{% static 'Perfil/styles_perfil.css' %}">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Inter&family=Noto+Sans&family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="contenedor_perfil">
+        <div class="img_perfil">
+            <img src="{% static 'Perfil/imagenes/foto_perfil.png' %}">
+        </div>
+        <div class="perfil1">
+        	<h1>Cliente</h1>
+            <div class="info">
+                <h2>Usuario</h2>
+                <p>{{user.usuarios.usuario}}</p>
+            </div>
+            <div class="info">
+                <h2>Correo</h2>
+                <p>{{user.usuarios.email}}</p>
+            </div>
+            <div class="info">
+                <h2>Contraseña</h2>
+                <p>{{user.usuarios.contraseña}}</p>
+            </div>
+            <div class="info">
+                <h2>Direccion</h2>
+                <p>{{user.usuarios.direccion}}</p>
+            </div>
+            <div class="info">
+                <h2>Numero telefonico</h2>
+                <p>{{user.usuarios.celular}}</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-image: linear-gradient(to right, #bf5a0f 0%, #fee140 100%);
+}
+
+@font-face {
+	font-family: bigfatscript;
+	src: url("Fuentes/Bigfat Script.ttf");
+}
+
+.contenedor_perfil {
+	margin-top: 5vh;
+	margin-left: 50vh;
+	border-radius: 10px;
+	overflow: hidden;
+	width: 700px;
+	border: 5px solid black;
+	height: 164vh;
+	background-color: #00B7BD;
+	margin-bottom: 10px;
+}
+
+.img_perfil {
+	background-color: #FF9800;
+	width: 380px;
+	overflow: hidden;
+	height: 380px;
+	overflow: hidden;
+	border-radius: 260px;
+	border: 5px solid black;
+	margin-top: 3vh;
+	margin-left: 21vh;
+}
+
+.img_perfil img {
+	width: 100%;
+	height: auto;
+}
+
+.perfil1 h1 {
+	text-align: center;
+	font-family: bigfatscript;
+	font-size: 50px;
+	font-weight: 200;
+}
+
+.perfil1 {
+	border-radius: 10px;
+	background-color: #FF9800;
+	margin-left: 3vh;
+	width: 650px;
+	border: 4px solid black;
+	height: 100vh;
+	margin-top: 3vh;
+}
+
+.info h2 {
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+.perfil1 h2 {
+	font-family: bigfatscript;
+	font-weight: 200;
+	font-size: 40px;
+}
+
+.perfil1 p {
+	width: 600px;
+	font-family: 'Baloo 2', cursive;
+	border-radius: 10px;
+	border: 3px solid black;
+	font-weight: 200;
+	font-size: 30px;
+	margin-left: 10px;
+	background-color: #FFCD00;
+}
