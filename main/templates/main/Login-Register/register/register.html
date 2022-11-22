@@ -8,6 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'Login-Register/register/register.css' %}">
     <title>Matias Pin Pin Register</title>
+    <!-- -------------ALERTAS MENSAJES TOAST----------------- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <!-- ----------------------------------------------------------------- -->
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +29,17 @@
 <body>
     <div class="container">
         <div class="login-container">
+            {% if messages %}
+        {% for message in messages %}
+        <!-- |------------------------------error----------------------------------------| -->
+            {% if message.tags == 'error' %}
+                <script>
+                    $(function(){
+                        toastr.error("{{message}}", "" , {timeOut: 2000})});
+                </script>
+            {% endif %}
+        {% endfor %} 
+    {% endif %}
             <div class="register">
                 <h2>Registro Matias Pin Pin</h2>
                 <form action="" method="POST">
@@ -33,6 +49,7 @@
                     <input  name="apellidos" type="text" placeholder="Ingrese Sus Apellidos" value="" required>
                     <input  name="email" type="email" placeholder="Ingrese Su Correo" value="" required>
                     <input  name="celular" type="tel" placeholder="Ingrese Su numero celular" value="" pattern="[0-9]{10}"required>
+                    <input  name="direccion" type="text" placeholder="Ingrese Su Direccion" value="" required>
                     <input  name="contraseña" type="password" placeholder="Ingrese Su Contraseña" value="" required>
                     <button type="submit" class="submit">Registrarse</button>
                 </form>

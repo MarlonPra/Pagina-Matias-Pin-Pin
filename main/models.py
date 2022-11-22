@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models import F, Sum, FloatField
 
 
 # Create your models here.
@@ -12,6 +13,7 @@ class usuarios(models.Model):
     email = models.EmailField(max_length=254, null=True, blank=True)
     celular = models.CharField(max_length=10, null=True, blank=True)
     contraseña = models.CharField(max_length=50, null=True, blank=True)
+    direccion = models.CharField(max_length=200, null=True, blank=True)
     TIPOS = [
         ("C", "Cliente"),
         ("A", "Asesor")]
@@ -64,3 +66,41 @@ class spizza(models.Model):
 
     class Meta:
         ordering = ["id"]
+
+
+class Pedido(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    total_ped = models.IntegerField(default=0, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.id)
+
+    @property
+    def total(self):
+        return self.lineapedido_set.aggregate(
+            total=Sum(F("precio")*F("cantidad"), output_field=FloatField())
+        )["total"]
+
+    class Meta:
+        db_table = 'pedidos'
+        verbose_name = 'pedido'
+        verbose_name_plural = 'pedidos'
+        ordering = ['id']
+
+
+class LineaPedido(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    producto = models.ForeignKey(producto, on_delete=models.CASCADE)
+    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
+    cantidad = models.IntegerField(default=1)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.cantidad} unidades de  {self.producto.nombrep}'
+
+    class Meta:
+        db_table = 'lineapedidos'
+        verbose_name = 'lineapedido'
+        verbose_name_plural = 'lineapedidos'
+        ordering = ['id']

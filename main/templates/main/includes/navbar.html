@@ -4,8 +4,11 @@
     <a href="/">Inicio</a>
     <a href=" /carta ">Carta</a>
     <a href="/galeria">Galeria</a>
-    {% if user.is_authenticated %}
-    <a href="#">Perfil</a>
+    {% if request.user.is_authenticated and user.usuarios.tipo == "A" %}
+    <a href="/pedidos">Pedidos</a>
+    <a href="/logout">Salir</a>
+    {% elif request.user.is_authenticated %}
+    <a href="/perfil">Perfil</a>
     <a href="/logout">Salir</a>
     {% else %}
     <a href="/register">Registrate</a>
@@ -15,11 +18,11 @@
     <img src="{% static 'img/carrito.png' %}" class="carritoimg" alt="carrito1" id="cart-icon">
 </nav>
 <div class="cart" id="cart_shop">
+    {% if request.user.is_authenticated %}
     <div class="titulo_carro">
         <h1>CARRO DE COMPRAS</h1>
     </div>
     <div class="contenido_carro">
-        {% if user.is_authenticated %}
         {% if request.session.carro.items %}
         {% for key,value in request.session.carro.items %}
         <div class="contenido_todo">
@@ -48,7 +51,9 @@
                         <label for="hel1">Primer Sabor: </label>
                         <select name="hel1" id="hel1">
                             {% for i in shelado %}
-                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% if i.Estado == True  %}
+                                    <option value="{{i.nombres}}">{{i.nombres}}</option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                     </div>
@@ -56,7 +61,9 @@
                         <label for="hel2">Segundo Sabor: </label>
                         <select name="he2" id="hel2">
                             {% for i in shelado %}
-                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% if i.Estado == True  %}
+                                    <option value="{{i.nombres}}">{{i.nombres}}</option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                     </div>
@@ -64,7 +71,9 @@
                         <label for="hel3">Tercer Sabor: </label>
                         <select name="he3" id="hel3">
                             {% for i in shelado %}
-                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% if i.Estado == True  %}
+                                    <option value="{{i.nombres}}">{{i.nombres}}</option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                     </div>
@@ -75,8 +84,6 @@
                             {% for i in shelado %}
                                 {% if i.Estado == True  %}
                                     <option value="{{i.nombres}}">{{i.nombres}}</option>
-                                {% else %}
-                                    <p>Hola</p>
                                 {% endif %}
                             {% endfor %}
                         </select>
@@ -85,7 +92,9 @@
                         <label for="hel2">Segundo Sabor: </label>
                         <select name="he2" id="hel2">
                             {% for i in shelado %}
-                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% if i.Estado == True  %}
+                                    <option value="{{i.nombres}}">{{i.nombres}}</option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                     </div>
@@ -94,7 +103,9 @@
                         <label for="hel1">Primer Sabor: </label>
                         <select name="hel1" id="hel1">
                             {% for i in shelado %}
-                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% if i.Estado == True  %}
+                                    <option value="{{i.nombres}}">{{i.nombres}}</option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                     </div>
@@ -102,38 +113,51 @@
                     {% endif %}
                     {% elif value.categoria == "PZ" %}
                     {% if value.corte_pizza == "2" %}
-                    <label for="pizz1">Sabor Pizza1:</label>  
-                    <select name="pizz1" id="pizz1">
-                        <option value="res">res</option>
-                        <option value="Cerdo">Cerdo</option>
-                        <option value="Pollo">Pollo</option>
-                    </select>
-                    <label for="pizz2">Sabor Pizza2:</label>
-                    <select name="pizz2" id="pizz2">
-                        <option value="res">res</option>
-                        <option value="Cerdo">Cerdo</option>
-                        <option value="Pollo">Pollo</option>
-                    </select>
-                    {% else %}
-                    <label for="pizz1">Sabor Pizza1:</label>
+                    <div class="sabor1">
+                    <label for="pizz1">Primer Sabor:</label>  
                     <select name="pizz1" id="pizz1">
                         {% for i in spizza %}
-                            <option value="{{i.nombres}}">{{i.nombres}}</option>
+                            {% if i.Estado == True  %}
+                                    <option value="{{i.nombres}}">{{i.nombres}}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </select>
+                    </div>
+                    <div class="sabor1">
+                    <label for="pizz2">Segundo Sabor:</label>
+                    <select name="pizz2" id="pizz2">
+                        {% for i in spizza %}
+                            {% if i.Estado == True  %}
+                                    <option value="{{i.nombres}}">{{i.nombres}}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </select>
+                    </div>
+                    {% else %}
+                    <div class="sabor1">
+                    <label for="pizz1">Primer Sabor:</label>
+                    <select name="pizz1" id="pizz1">
+                        {% for i in spizza %}
+                            {% if i.Estado == True  %}
+                                    <option value="{{i.nombres}}">{{i.nombres}}</option>
+                                {% endif %}
                         {% endfor %}
                     </select>
+                    </div>
                     {% endif %}
                     {% elif value.categoria == "CR" %}
                     {% if value.tipo_carn == "2" %}
+                    <div class="sabor1">
                     <label for="rapida">Selecciona tipo de carne:</label>
                     <select name="rapida" id="rapida">
                         <option value="Cerdo">Cerdo</option>
                         <option value="Pollo">Pollo</option>
                     </select>
+                    </div>
                     {% else %}
                     {% endif %}
-                    {% else %}
-                    <h1>HOLA</h1>
-                    </select>
                     {% endif %}
                 </div>
             </div>
@@ -146,21 +170,23 @@
             </h1>
         </div>
         {% endif %}
-        {% else %}
+    </div>
+    {% if request.session.carro.items %}
+        <div class="observacion_carro">
+            <h3 class="observacion">Observaciones:</h3>
+            <textarea name="observaciones" class="texto_carro_area"></textarea>
+        </div>
+        <div class="valor_boton">
+            <h1 class="texto_carro"> <span class="texto_carro_total">Total:</span> {{importe_total_carro}} COP</h1>
+            <a href="/procesar" class="boton_carrito">Comprar</a>
+        </div>
+    {% endif %}
+    {% else %}
             <div class="carro_vacio">
             <h1>
                 INICIA SESION
             </h1>
         </div>
         {% endif %}
-    </div>
-    <div class="observacion_carro">
-        <h3 class="observacion">Observaciones:</h3>
-        <textarea name="observaciones" class="texto_carro_area"></textarea>
-    </div>
-    <div class="valor_boton">
-        <h1 class="texto_carro"> <span class="texto_carro_total">Total:</span> {{importe_total_carro}} COP</h1>
-        <a href="#" class="boton_carrito">Comprar</a>
-    </div>
 </div>
 <script src="{%static 'main.js' %}"></script>

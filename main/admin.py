@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import usuarios, producto, shelados, spizza
+from .models import *
 
 # Register your models here.
 
@@ -15,3 +15,7 @@ admin.site.register(producto)
 admin.site.register(shelados)
 
 admin.site.register(spizza)
+
+admin.site.register(Pedido)
+
+admin.site.register(LineaPedido)
