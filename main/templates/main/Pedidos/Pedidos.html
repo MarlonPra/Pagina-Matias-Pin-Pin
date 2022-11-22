@@ -38,19 +38,11 @@
         <div class="pedidos">
         <div class="ped_titulo">
             <div class="nombre">
-                {% for o in lineapedido %}
-                    {% if i.user == o.user  %}
-                    <h2>Cliente: {{o.user}}</h2> 
-                {% endif %}
-                {% endfor %}    
+                    <h2>Cliente: {{i.user}}</h2> 
             </div>
             <div class="num_pedido">
                 <div class="num_pedido_titulo">
-                    {% for o in lineapedido%}
-                    {% if i.user == o.user  %}
-                    <h2>Numero pedido: {{o.pedido}}</h2>
-                {% endif %}
-                {% endfor %} 
+                    <h2>Numero pedido: {{i.id}}</h2>
                 </div>
                 <a class="btn_comp" href="{% url 'main:completar' i.id %}">Completado</a>
             </div>

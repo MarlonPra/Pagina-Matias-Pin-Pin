@@ -8,6 +8,7 @@ from django.contrib import messages
 from .models import *
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.core.cache import cache
 from .carro import Carro
 from .context_processor import importe_total_carro
 
@@ -17,7 +18,7 @@ menu = {"menu": ''}
 redirectpagina = 'main:homepage'
 shelados = shelados.objects.all()
 spizza = spizza.objects.all()
-usuario=usuarios.objects.all()
+usuario = usuarios.objects.all()
 tpedido = Pedido.objects.all()
 lineapedido = LineaPedido.objects.all()
 
@@ -65,10 +66,13 @@ def galeria(request):
 def domicilios(request):
     return render(request, 'main/Menu/menu.html', {"shelado": shelados, "spizza": spizza, "usu": usuario})
 
+
 def perfil(request):
     return render(request, 'main/Perfil/Perfil.html', {"usu": usuario})
 
+
 def pedidos(request):
+    if 
     return render(request, 'main/Pedidos/Pedidos.html', {"tpedido": tpedido, "lineapedido": lineapedido})
 
 
@@ -172,20 +176,22 @@ def limpiar_carro(request):
 
 # |-----------------------------------Pedido---------------------------------------|
 
+
 def procesar_pedido(request):
     total_car = importe_total_carro(request)
-    pedido=Pedido.objects.create(user=request.user, total_ped =total_car["importe_total_carro"])
-    carro=Carro(request)
-    lineas_pedido=list()
-    for key,value in carro.carro.items():
+    pedido = Pedido.objects.create(
+        user=request.user, total_ped=total_car["importe_total_carro"])
+    carro = Carro(request)
+    lineas_pedido = list()
+    for key, value in carro.carro.items():
         lineas_pedido.append(LineaPedido(
 
-                producto_id=key,
-                cantidad=value["cantidad"],
-                user=request.user,
-                pedido=pedido
+            producto_id=key,
+            cantidad=value["cantidad"],
+            user=request.user,
+            pedido=pedido
 
-            ))
+        ))
 
     LineaPedido.objects.bulk_create(lineas_pedido)
     limpiar_carro(request)
@@ -194,8 +200,10 @@ def procesar_pedido(request):
 
     return redirect('main:homepage')
 
+
 def eliminar_pedido(request, pedido_id):
     ttpedido = Pedido.objects.get(id=pedido_id)
     ttpedido.delete()
+    cache.clear()
     messages.success(request, f"Pedido Realizado exitosamente")
-    return redirect('main:homepage')
+    return redirect('main:pedidos')

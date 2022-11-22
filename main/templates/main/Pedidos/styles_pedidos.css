@@ -69,6 +69,7 @@ a:nth-child(5):hover~.animation {
     margin-left: 5%;
     position: relative;
     top: 130px;
+    margin-bottom: 2%;
 }
 .ped_titulo{
 	display: flex;
