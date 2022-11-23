@@ -1,5 +1,7 @@
 from django.urls import path, include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 app_name = 'main'
 
@@ -11,7 +13,7 @@ urlpatterns = [
     path('carta/Comida Rapida', views.comrapida, name='comida_rapida'),
     path('carta/Pizzeria', views.pizzeria, name='pizzeria'),
     path('carta/Bebidas', views.bebidas, name='bebidas'),
-    path('galeria', views.galeria, name='galeria'),
+    path('galeria', views.galeria1, name='galeria'),
     path('login', views.login, name='login'),
     path('register', views.register, name='register'),
     path('logout', views.logout_request, name='logout'),
@@ -24,4 +26,6 @@ urlpatterns = [
     path('procesar/', views.procesar_pedido, name='procesar'),
     path('completar/<int:pedido_id>/', views.eliminar_pedido, name='completar'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

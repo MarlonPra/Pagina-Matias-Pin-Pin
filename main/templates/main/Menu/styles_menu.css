@@ -364,6 +364,10 @@ a:nth-child(5):hover~.animation {
     width: 500px;
     height: auto;
 }
+.imgsubcon1{
+    width: 274px;
+    height: auto;
+}
 /*--------------------------CLASE DEL CONTENEDOR2--------------------------------*/
 .contenedor2{
     overflow: hidden;

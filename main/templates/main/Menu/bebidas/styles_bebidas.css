@@ -72,27 +72,6 @@ nav .animation {
     border-radius: 8px;
 }
 
-a:nth-child(1) {
-    width: 100px;
-}
-
-a:nth-child(2) {
-    width: 120px;
-}
-
-a:nth-child(3) {
-    width: 120px;
-}
-
-a:nth-child(4) {
-    width: 100px;
-    padding: 0 10px;
-}
-
-a:nth-child(5) {
-    width: 100px;
-}
-
 nav .start-about,
 a:nth-child(1):hover~.animation {
     width: 100px;
@@ -199,6 +178,7 @@ a:nth-child(5):hover~.animation {
 .seccion_gaseosas{
     overflow: hidden;
     margin-bottom: 15px; 
+    
 }
 .seccion_gaseosas h1{ 
     font-family: bigfatscript;
@@ -223,7 +203,7 @@ a:nth-child(5):hover~.animation {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
-button {
+.menu_carta a {
     font-family: 'Baloo 2', cursive;
     display: inline-flex;
     align-items: center;
@@ -242,13 +222,13 @@ button {
     position: relative;
     overflow: hidden;
 }
-button span {
+a span {
     transition: all 5s ease-out;
     position: absolute;
     align-items: center;
     display: flex;
 }
-button.botones_gaseosas img{
+.botones_gaseosas img{
     display: flex;
     align-items: center;
     position: absolute;
@@ -257,15 +237,15 @@ button.botones_gaseosas img{
     opacity: 0;
     left: 5px;
 }
-button.botones_gaseosas:hover{
+.botones_gaseosas:hover{
     background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%) ;
     transition: all 500ms ease-out;
 }
-button.botones_gaseosas:hover img{
+.botones_gaseosas:hover img{
     left: calc(100% - 50px);
     opacity: 1;
 }
-button.botones_gaseosas:hover span {
+.botones_gaseosas:hover span {
     left: 20px;
     transition: all 100s ease-out;
 }
@@ -297,7 +277,7 @@ button.botones_gaseosas:hover span {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
-button.botones_aguas img{
+.botones_aguas img{
     display: flex;
     align-items: center;
     position: absolute;
@@ -306,14 +286,14 @@ button.botones_aguas img{
     opacity: 0;
     left: 5px;
 }
-button.botones_aguas:hover{
+.botones_aguas:hover{
     background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%) ;
 }
-button.botones_aguas:hover img{
+.botones_aguas:hover img{
     left: calc(100% - 50px);
     opacity: 1;
 }
-button.botones_aguas:hover span {
+.botones_aguas:hover span {
     left: 20px;
 }
 /*------------------------------Varios--------------------------------*/
@@ -344,7 +324,7 @@ button.botones_aguas:hover span {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
-button.botones_varios img{
+.botones_varios img{
     display: flex;
     align-items: center;
     position: absolute;
@@ -353,14 +333,14 @@ button.botones_varios img{
     opacity: 0;
     left: 5px;
 }
-button.botones_varios:hover{
+.botones_varios:hover{
     background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%) ;
 }
-button.botones_varios:hover img{
+.botones_varios:hover img{
     left: calc(100% - 50px);
     opacity: 1;
 }
-button.botones_varios:hover span {
+.botones_varios:hover span {
     left: 20px;
 }
 /*------------------------------Bebidas-Alcoholicas--------------------------------*/
@@ -391,7 +371,7 @@ button.botones_varios:hover span {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
-button.botones_bebidas-alcoholicas img{
+.botones_bebidas-alcoholicas img{
     display: flex;
     align-items: center;
     position: absolute;
@@ -400,14 +380,14 @@ button.botones_bebidas-alcoholicas img{
     opacity: 0;
     left: 5px;
 }
-button.botones_bebidas-alcoholicas:hover{
+.botones_bebidas-alcoholicas:hover{
     background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%) ;
 }
-button.botones_bebidas-alcoholicas:hover img{
+.botones_bebidas-alcoholicas:hover img{
     left: calc(100% - 50px);
     opacity: 1;
 }
-button.botones_bebidas-alcoholicas:hover span{
+.botones_bebidas-alcoholicas:hover span{
     left: 20px;
 }
 /*------------------------------Bebidas-Naturales--------------------------------*/
@@ -438,7 +418,7 @@ button.botones_bebidas-alcoholicas:hover span{
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
-button.botones_bebidas-naturales img{
+.botones_bebidas-naturales img{
     display: flex;
     align-items: center;
     position: absolute;
@@ -447,14 +427,14 @@ button.botones_bebidas-naturales img{
     opacity: 0;
     left: 5px;
 }
-button.botones_bebidas-naturales:hover{
+.botones_bebidas-naturales:hover{
     background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%) ;
 }
-button.botones_bebidas-naturales:hover img{
+.botones_bebidas-naturales:hover img{
     left: calc(100% - 50px);
     opacity: 1;
 }
-button.botones_bebidas-naturales:hover span{
+.botones_bebidas-naturales:hover span{
     left: 20px;
 }
 /*|-----------------------FOOTER------------------------|*/

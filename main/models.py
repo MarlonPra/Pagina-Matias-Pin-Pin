@@ -104,3 +104,15 @@ class LineaPedido(models.Model):
         verbose_name = 'lineapedido'
         verbose_name_plural = 'lineapedidos'
         ordering = ['id']
+
+
+class galeria(models.Model):
+    name = models.CharField(max_length=100, null=False, blank=False)
+    image = models.ImageField(null=False, blank=False)
+    descripcion = models.CharField(max_length=500, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['-id']

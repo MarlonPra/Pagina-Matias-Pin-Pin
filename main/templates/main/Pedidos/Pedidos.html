@@ -34,11 +34,16 @@
     <div class="menu">
         {% include "main/includes/navbar.html" %}
     </div>
+    {% for ae in lineapedido %}
+       {% if ae.id == True %}
+            <h2>PRUEBA 1</h2>
+        {% endif %} 
+    {% endfor %}
     {% for i in tpedido %}
         <div class="pedidos">
         <div class="ped_titulo">
             <div class="nombre">
-                    <h2>Cliente: {{i.user}}</h2> 
+                    <h2>Cliente: {{i.user}}{{lineapedido.id}}</h2> 
             </div>
             <div class="num_pedido">
                 <div class="num_pedido_titulo">
@@ -50,8 +55,8 @@
         <div class="ped_contenido">
             <div class="contedino_prod">
                 {% for o in lineapedido %}
-                {% if i.user == o.user  %}
-                <div class="productos_cont">
+                {% if i.user == o.user and i.id == o.pedido.id %}
+                    <div class="productos_cont">
                     <div class="name_prod">
                         <h2>{{o.producto.nombrep}}</h2>
                     </div>
@@ -63,7 +68,7 @@
                 {% endfor %}
             </div>
             <div class="contenido_total">
-                <h2>{{i.total_ped}} {{i.user}} {{lineapedido.user}}</h2>
+                <h2>{{i.total_ped}}</h2>
             </div>
         </div>
     </div>

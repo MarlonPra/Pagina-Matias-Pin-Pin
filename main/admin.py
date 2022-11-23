@@ -18,4 +18,6 @@ admin.site.register(spizza)
 
 admin.site.register(Pedido)
 
-admin.site.register(LineaPedido)
+admin.site.register(LineaPedido) 
+
+admin.site.register(galeria)

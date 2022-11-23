@@ -19,8 +19,6 @@ redirectpagina = 'main:homepage'
 shelados = shelados.objects.all()
 spizza = spizza.objects.all()
 usuario = usuarios.objects.all()
-tpedido = Pedido.objects.all()
-lineapedido = LineaPedido.objects.all()
 
 
 def homepage(request):
@@ -59,8 +57,9 @@ def bebidas(request):
     return render(request, 'main/Menu/bebidas/Bebidas.html', {"productos": productos, "shelado": shelados, "spizza": spizza, "usu": usuario})
 
 
-def galeria(request):
-    return render(request, 'main/galeria/index.html', {"shelado": shelados, "spizza": spizza, "usu": usuario})
+def galeria1(request):
+    galerias = galeria.objects.all()
+    return render(request, 'main/galeria/index.html', {"shelado": shelados, "spizza": spizza, "usu": usuario, "galeria": galerias})
 
 
 def domicilios(request):
@@ -72,7 +71,17 @@ def perfil(request):
 
 
 def pedidos(request):
-    if 
+    tpedido = Pedido.objects.all()
+    lineapedido = LineaPedido.objects.all()
+    if not request.user.is_authenticated:
+        messages.error(request, "Inicia sesion")
+        return redirect('main:login')
+    elif not request.user.usuarios.tipo == "A":
+        messages.error(request, ":)")
+        return redirect('main:homepage')
+    elif not lineapedido:
+        messages.info(request, "No hay pedidos")
+        return redirect('main:homepage')
     return render(request, 'main/Pedidos/Pedidos.html', {"tpedido": tpedido, "lineapedido": lineapedido})
 
 

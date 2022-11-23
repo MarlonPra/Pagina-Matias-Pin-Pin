@@ -70,27 +70,6 @@ nav .animation {
     border-radius: 8px;
 }
 
-a:nth-child(1) {
-    width: 100px;
-}
-
-a:nth-child(2) {
-    width: 120px;
-}
-
-a:nth-child(3) {
-    width: 120px;
-}
-
-a:nth-child(4) {
-    width: 100px;
-    padding: 0 10px;
-}
-
-a:nth-child(5) {
-    width: 100px;
-}
-
 nav .start-about,
 a:nth-child(1):hover~.animation {
     width: 100px;
@@ -328,26 +307,6 @@ figure {
     margin-bottom: 5px;
 }
 
-button {
-    font-family: 'Baloo 2', cursive;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 50px;
-    background: #1E1E1E;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: .3s ease all;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-}
-
 .botones_gaseosas1 {
     font-family: 'Baloo 2', cursive;
     display: inline-flex;
@@ -409,14 +368,14 @@ button {
     overflow: hidden;
 }
 
-button span {
+a span {
     transition: all 5s ease-out;
     position: absolute;
     align-items: center;
     display: flex;
 }
 
-button.botones_gaseosas img {
+.botones_gaseosas img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -425,7 +384,7 @@ button.botones_gaseosas img {
     opacity: 0;
     left: 5px;
 }
-button.botones_gaseosas1 img {
+.botones_gaseosas1 img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -434,7 +393,7 @@ button.botones_gaseosas1 img {
     opacity: 0;
     left: 5px;
 }
-button.botones_gaseosas2 img {
+.botones_gaseosas2 img {
     display: flex;
     align-items: center;
     position: absolute;
@@ -443,42 +402,42 @@ button.botones_gaseosas2 img {
     opacity: 0;
     left: 5px;
 }
-button.botones_gaseosas:hover {
+.botones_gaseosas:hover {
     background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%);
     transition: all 500ms ease-out;
     box-shadow: 2px 2px 10px black;
 }
-button.botones_gaseosas1:hover {
+.botones_gaseosas1:hover {
     background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%);
     transition: all 500ms ease-out;
     box-shadow: 2px 2px 10px black;
 }
-button.botones_gaseosas2:hover {
+.botones_gaseosas2:hover {
     background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%);
     transition: all 500ms ease-out;
     box-shadow: 2px 2px 10px black;
 }
-button.botones_gaseosas:hover img {
+.botones_gaseosas:hover img {
     left: calc(100% - 50px);
     opacity: 1;
 }
-button.botones_gaseosas1:hover img {
+.botones_gaseosas1:hover img {
     left: calc(100% - 50px);
     opacity: 1;
 }
-button.botones_gaseosas2:hover img {
+.botones_gaseosas2:hover img {
     left: calc(100% - 50px);
     opacity: 1;
 }
-button.botones_gaseosas:hover span {
+.botones_gaseosas:hover span {
     left: 20px;
     transition: all 100s ease-out;
 }
-button.botones_gaseosas1:hover span {
+.botones_gaseosas1:hover span {
     left: 20px;
     transition: all 100s ease-out;
 }
-button.botones_gaseosas2:hover span {
+.botones_gaseosas2:hover span {
     left: 20px;
     transition: all 100s ease-out;
 }
@@ -1019,6 +978,32 @@ button.botones_gaseosas2:hover span {
     font-size: 19px;
 }
 
+.botones_gaseosas22 {
+    font-family: 'Baloo 2', cursive;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 21%;
+    height: 35px;
+    background: #1E1E1E;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.botones_gaseosas22:hover {
+    background: linear-gradient(90deg, #00B7BD 0%, #FF9800 45%, #FFCD00 84%);
+    transition: all 500ms ease-out;
+    box-shadow: 2px 2px 10px black;
+}
 /*|-----------------------FOOTER------------------------|*/
 footer {
     width: 100%;
