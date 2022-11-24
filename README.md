@@ -16,4 +16,11 @@ La creación de un entorno web para mejorar la administración a la hora de toma
 ## Desarrollo
 Se creara una página web en la cual puedas registrarte y ver una variedad de productos del restaurante, productos los cuales tendrás su propia categoría cada uno, también dado la opción de agregarlos al carrito de compras para que puedas seleccionar y pedir de forma ordenada tus domicilios y al restaurante le quede mas sencillo poder ordenar y hacer los pedidos dependiendo de la hora y el lugar, además los clientes podrán ver la situación de su pedido en tiempo real y podrá chatear con el asesor del restaurante para saber el estatus de su encargo, por otro lado el asesor podrá establecer el tiempo aproximado de la llegada de los productos, de paso el cliente podrá ver la variedad de imágenes para que pueda saber el lugar y como es la estructura del restaurante y así pueda ir y recomendarlo con otras personas, ya que este es un lugar apto para toda la familia.
 
+## Contributors
+<a href="https://github.com/MarlonPra/Pagina-Matias-Pin-Pin/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MarlonPra/Pagina-Matias-Pin-Pin" />
+</a>
+
+### Language
+
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=MarlonPra&theme=blue-green)
